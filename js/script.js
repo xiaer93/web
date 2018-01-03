@@ -42,7 +42,12 @@
 		share:[{
 				"tag":"share_1",
 				"bdSize":24
-			}]
+			}],
+		slide:[{	   
+			bdImg : 0,
+			bdPos : "right",
+			bdTop : 100
+		}]
 	};
 
 			/*

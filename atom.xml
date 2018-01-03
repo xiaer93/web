@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://clovey.party/"/>
-  <updated>2018-01-03T08:22:06.526Z</updated>
+  <updated>2018-01-03T10:02:29.749Z</updated>
   <id>http://clovey.party/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>landscape主题修改</title>
+    <link href="http://clovey.party/2018/01/03/landscape%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9/"/>
+    <id>http://clovey.party/2018/01/03/landscape主题修改/</id>
+    <published>2018-01-03T09:16:09.831Z</published>
+    <updated>2018-01-03T10:02:29.749Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>hexo原生主题看起来不是很满意，因此对其进行了一些修改！</p></blockquote><h2 id="主要修改"><a href="#主要修改" class="headerlink" title="主要修改"></a>主要修改</h2><ul><li>layout_partial，这里为局部模版区域，修改html代码</li><li>source\css，这里为样式区域，修改css代码</li><li>source\js，这里为javascript区域，修改js代码</li><li>_config.yml，这是主题配置信息    </li></ul><h3 id="1-新增自定义菜单works，支持展示个人作品"><a href="#1-新增自定义菜单works，支持展示个人作品" class="headerlink" title="1. 新增自定义菜单works，支持展示个人作品"></a>1. 新增自定义菜单works，支持展示个人作品</h3><ul><li><p>使用hexo3.0<a href="https://hexo.io/zh-cn/docs/data-files.html" target="_blank" rel="noopener">数据文件</a>功能，通过project.json传入作品集信息！</p><pre><code>[    {        &quot;name&quot;:&quot;jq插件之日期选择器&quot;,        &quot;date&quot;:&quot;2017-5&quot;,        &quot;url&quot;:&quot;#&quot;,        &quot;img&quot;:&quot;http://o7bkkhiex.bkt.clouddn.com/item-apple.jpg&quot;,        &quot;title&quot;:&quot;jq插件&quot;,        &quot;description&quot;:&quot;jq插件实现的日历选择器&quot;    }]</code></pre></li><li><p>添加works.ejs模版</p><pre><code>&lt;% site.data.project.forEach(function (work,index) {  %&gt;&lt;article class=&quot;work-inner&quot;&gt;  &lt;header class=&quot;clear-float&quot;&gt;    &lt;h3&gt;&lt;%= work.name %&gt;&lt;/h3&gt;    &lt;address&gt;&lt;%= work.date%&gt;&lt;/address&gt;  &lt;/header&gt;  &lt;img src=&quot;&lt;%= work.img%&gt;&quot; alt=&quot;work.title&quot;&gt;  &lt;div class=&quot;description&quot;&gt;    &lt;h4&gt;&lt;%= work.title%&gt;&lt;/h4&gt;    &lt;p&gt;&lt;%= work.description%&gt;&lt;/p&gt;  &lt;/div&gt;  &lt;footer&gt;    &lt;a class=&quot;work_link&quot; href=&quot;&lt;%= work.url%&gt;&quot;&gt;Open it！&lt;/a&gt;  &lt;/footer&gt;&lt;/article&gt;&lt;% }) %&gt;</code></pre></li><li><p>添加自定义菜单</p><pre><code>在命令行里面输入：hexo new page &quot;about&quot;然后你会发现source里面多了个目录about，里面有个index.md。接着把链接加上，themes/&lt;theme_name&gt;/_config.yml里面的menu一项，添加一行About: /about。</code></pre></li><li><p>参考链接：</p><ul><li><a href="http://haojen.github.io/" target="_blank" rel="noopener">hexo模版之Anisina</a></li><li><a href="https://segmentfault.com/q/1010000000618915" target="_blank" rel="noopener">hexo怎么在菜单添加页面和分类</a></li></ul></li></ul><h3 id="2-添加百度统计"><a href="#2-添加百度统计" class="headerlink" title="2. 添加百度统计"></a>2. 添加百度统计</h3><ul><li>直接阅读官方教程，将百度统计的相关js添加至html文档中！<a href="https://tongji.baidu.com/sc-web/image/code3.gif" target="_blank" rel="noopener">安装案例</a></li></ul><h3 id="3-添加不蒜子"><a href="#3-添加不蒜子" class="headerlink" title="3. 添加不蒜子"></a>3. 添加不蒜子</h3><ul><li>不蒜子用于统计网站浏览量，并直接显示出来。直接阅读官网教程，<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">添加不蒜子功能</a></li></ul><h3 id="4-添加来必力评论"><a href="#4-添加来必力评论" class="headerlink" title="4. 添加来必力评论"></a>4. 添加来必力评论</h3><ul><li>添加文章评论功能，<a href="http://laibili.com.cn/introduce" target="_blank" rel="noopener">来必力官网</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;hexo原生主题看起来不是很满意，因此对其进行了一些修改！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;主要修改&quot;&gt;&lt;a href=&quot;#主要修改&quot; class=&quot;headerlink&quot; title=&quot;主要修改&quot;&gt;&lt;/a&gt;主要修改&lt;/h2&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="网络技术" scheme="http://clovey.party/categories/%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="hexo主题" scheme="http://clovey.party/tags/hexo%E4%B8%BB%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>保险常识</title>

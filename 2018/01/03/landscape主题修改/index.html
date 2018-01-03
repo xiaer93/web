@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!--根据当前显示页面，修改网页title-->
   
-  <title>科学上网神器shadowsocks | xiaer</title>
+  <title>landscape主题修改 | xiaer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!--订阅feed，定义路径等等-->
  
@@ -76,12 +76,12 @@
 		<!--body被响应模版替换，如首页时调用index.ejs模版！-->
         <section id="main"><!--文章，调用article模版-->
 <!--文章-->
-<article id="post-科学上网神器shadowsocks" class="article article-type-post" itemscope itemprop="blogPost">
+<article id="post-landscape主题修改" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <!--文章发布日期-->
 
-<a href="/2016/07/29/科学上网神器shadowsocks/" class="article-date">
-  <time datetime="2016-07-29T13:17:43.000Z" itemprop="datePublished">2016-07-29</time>
+<a href="/2018/01/03/landscape主题修改/" class="article-date">
+  <time datetime="2018-01-03T09:16:09.831Z" itemprop="datePublished">2018-01-03</time>
 </a>
     <!--文章分类-->
 
@@ -103,7 +103,7 @@
 	<!--非引用文章-->
   
     <h1 class="article-title" itemprop="name">
-      科学上网神器shadowsocks
+      landscape主题修改
     </h1>
   
 
@@ -114,23 +114,68 @@
       
 	  <!--直接显示文章内容-->
         <blockquote>
-<p><em>我希望有一天我能够住在一个拥有随意编写任何我喜欢的代码的国家而无需为之恐惧。</em></p>
-<p><em>我希望你们将来能为互联网自由贡献出了不起的东西。</em></p>
+<p>hexo原生主题看起来不是很满意，因此对其进行了一些修改！</p>
 </blockquote>
-<p><img src="http://i1.piimg.com/4851/db0b0d073bc14977.png" alt="clowwindy"><br>一直听说我们有个墙，也有个饭墙的冲动，谁让<strong>哪里有压迫哪里就有反抗</strong>呢？之前一直用的“自由门”软件，但是感觉很不稳定，大多数时间用不。折腾了好久，找各种饭墙软件啦，还有VPN等等，但是都感觉有点不靠谱，网友评论也是各种各种。直到最近发现了Shadowsocks，瞬间感觉有希望了，查看维基百科，居然还能有这么心酸的故事。</p>
-<blockquote>
-<p>Shadowsocks（中文名称：影梭）是使用Python等语言开发的、基于Apache许可证开源的代理软件。Shadowsocks使用socks5代理，用于保护网络流量。在中国大陆被广泛用于突破防火长城（GFW），以浏览被封锁的内容。</p>
-<p>Shadowsocks分为服务器端和客户端。在使用之前，需要先将服务器端部署在支持Python的服务器上面，然后通过客户端连接并创建本地代理。</p>
-<p>2015年8月22日，Shadowsocks原作者Clowwindy因受到中国政府的压力，停止维护此项目。但开发已有人接管，仍有更新陆续推送。ShadowsocksR可作为Shadowsocks的替代软件。</p>
-</blockquote>
-<a id="more"></a> 
-<p>作为一般用户，当然不用购买VPS部署服务器啦，直接找相关网站购买账户，用shadowsockR客户端登录。另外，一直使用chrome浏览器，有各种神器插件，暖暖的很贴心。其中有个主页插件Infinity，它好像在给某个SS网站打广告，唉，谁让这个插件真心好用呢，爱屋及乌，我就选择ss-fast，<a href="https://www.ss-fast.com/" target="_blank" rel="noopener"><strong>官网直达</strong></a>，顺带给他们打波广告吧。</p>
-<blockquote>
-<p>使用 SS-Fast 提供的加速服务，让您畅游在互联网的怀抱里，引领未来新生活。玩游戏、查资料、看视频，一套全搞定。</p>
-</blockquote>
-<p>ss-fast可以体验体验，每次15分钟，如果不嫌弃麻烦也可以循环操作循环使用。当然，我觉得还是支持下别人生意吧，毕竟饭墙不易，且行且珍惜，选择了15元/月套餐，使用起来感觉不错喔，网速棒棒哒。附上<a href="https://www.ss-fast.com/resources/docs/windows/" target="_blank" rel="noopener"><strong>WINDOWS平台安装配置教程</strong></a>，照着教程做就可以fan。</p>
-<p>扯了这么多，说说目的吧。曾有人说，要想功夫深，就得多用<a href="www.google.com.hk">谷歌</a>，虽然年轻不懂，但是还是多听听话&gt;&gt;&gt;<strong>科学上网，为了科学</strong>。最近就好好花时间研究研究干式变压器、学学python、还有hack等等。好好玩，保持科学上网，做一名好学生,等到羽翼丰满~</p>
-<p><img src="http://vc2tea.com/public/upload/whats-shadowsocks-04.png" alt="shadowsocks原理图"></p>
+<h2 id="主要修改"><a href="#主要修改" class="headerlink" title="主要修改"></a>主要修改</h2><ul>
+<li>layout_partial，这里为局部模版区域，修改html代码</li>
+<li>source\css，这里为样式区域，修改css代码</li>
+<li>source\js，这里为javascript区域，修改js代码</li>
+<li>_config.yml，这是主题配置信息    </li>
+</ul>
+<h3 id="1-新增自定义菜单works，支持展示个人作品"><a href="#1-新增自定义菜单works，支持展示个人作品" class="headerlink" title="1. 新增自定义菜单works，支持展示个人作品"></a>1. 新增自定义菜单works，支持展示个人作品</h3><ul>
+<li><p>使用hexo3.0<a href="https://hexo.io/zh-cn/docs/data-files.html" target="_blank" rel="noopener">数据文件</a>功能，通过project.json传入作品集信息！</p>
+<pre><code>[
+    {
+        &quot;name&quot;:&quot;jq插件之日期选择器&quot;,
+        &quot;date&quot;:&quot;2017-5&quot;,
+        &quot;url&quot;:&quot;#&quot;,
+        &quot;img&quot;:&quot;http://o7bkkhiex.bkt.clouddn.com/item-apple.jpg&quot;,
+        &quot;title&quot;:&quot;jq插件&quot;,
+        &quot;description&quot;:&quot;jq插件实现的日历选择器&quot;
+    }
+]
+</code></pre></li>
+<li><p>添加works.ejs模版</p>
+<pre><code>&lt;% site.data.project.forEach(function (work,index) {  %&gt;
+&lt;article class=&quot;work-inner&quot;&gt;
+  &lt;header class=&quot;clear-float&quot;&gt;
+    &lt;h3&gt;&lt;%= work.name %&gt;&lt;/h3&gt;
+    &lt;address&gt;&lt;%= work.date%&gt;&lt;/address&gt;
+  &lt;/header&gt;
+  &lt;img src=&quot;&lt;%= work.img%&gt;&quot; alt=&quot;work.title&quot;&gt;
+  &lt;div class=&quot;description&quot;&gt;
+    &lt;h4&gt;&lt;%= work.title%&gt;&lt;/h4&gt;
+    &lt;p&gt;&lt;%= work.description%&gt;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;footer&gt;
+    &lt;a class=&quot;work_link&quot; href=&quot;&lt;%= work.url%&gt;&quot;&gt;Open it！&lt;/a&gt;
+  &lt;/footer&gt;
+&lt;/article&gt;
+&lt;% }) %&gt;
+</code></pre></li>
+<li><p>添加自定义菜单</p>
+<pre><code>在命令行里面输入：hexo new page &quot;about&quot;
+
+然后你会发现source里面多了个目录about，里面有个index.md。
+
+接着把链接加上，themes/&lt;theme_name&gt;/_config.yml里面的menu一项，添加一行About: /about。
+</code></pre></li>
+<li><p>参考链接：</p>
+<ul>
+<li><a href="http://haojen.github.io/" target="_blank" rel="noopener">hexo模版之Anisina</a></li>
+<li><a href="https://segmentfault.com/q/1010000000618915" target="_blank" rel="noopener">hexo怎么在菜单添加页面和分类</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-添加百度统计"><a href="#2-添加百度统计" class="headerlink" title="2. 添加百度统计"></a>2. 添加百度统计</h3><ul>
+<li>直接阅读官方教程，将百度统计的相关js添加至html文档中！<a href="https://tongji.baidu.com/sc-web/image/code3.gif" target="_blank" rel="noopener">安装案例</a></li>
+</ul>
+<h3 id="3-添加不蒜子"><a href="#3-添加不蒜子" class="headerlink" title="3. 添加不蒜子"></a>3. 添加不蒜子</h3><ul>
+<li>不蒜子用于统计网站浏览量，并直接显示出来。直接阅读官网教程，<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">添加不蒜子功能</a></li>
+</ul>
+<h3 id="4-添加来必力评论"><a href="#4-添加来必力评论" class="headerlink" title="4. 添加来必力评论"></a>4. 添加来必力评论</h3><ul>
+<li>添加文章评论功能，<a href="http://laibili.com.cn/introduce" target="_blank" rel="noopener">来必力官网</a></li>
+</ul>
 
       
     </div>
@@ -139,22 +184,13 @@
 	  <!--分享文章-->
 	 
 		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
-			<a data-url="http://clovey.party/2016/07/29/科学上网神器shadowsocks/" data-excerpt="&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;我希望有一天我能够住在一个拥有随意编写任何我喜欢的代码的国家而无需为之恐惧。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;我希望你们将来能为互联网自由贡献出了不起的东西。&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://i1.piimg.com/4851/db0b0d073bc14977.png&#34; alt=&#34;clowwindy&#34;&gt;&lt;br&gt;一直听说我们有个墙，也有个饭墙的冲动，谁让&lt;strong&gt;哪里有压迫哪里就有反抗&lt;/strong&gt;呢？之前一直用的“自由门”软件，但是感觉很不稳定，大多数时间用不。折腾了好久，找各种饭墙软件啦，还有VPN等等，但是都感觉有点不靠谱，网友评论也是各种各种。直到最近发现了Shadowsocks，瞬间感觉有希望了，查看维基百科，居然还能有这么心酸的故事。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Shadowsocks（中文名称：影梭）是使用Python等语言开发的、基于Apache许可证开源的代理软件。Shadowsocks使用socks5代理，用于保护网络流量。在中国大陆被广泛用于突破防火长城（GFW），以浏览被封锁的内容。&lt;/p&gt;
-&lt;p&gt;Shadowsocks分为服务器端和客户端。在使用之前，需要先将服务器端部署在支持Python的服务器上面，然后通过客户端连接并创建本地代理。&lt;/p&gt;
-&lt;p&gt;2015年8月22日，Shadowsocks原作者Clowwindy因受到中国政府的压力，停止维护此项目。但开发已有人接管，仍有更新陆续推送。ShadowsocksR可作为Shadowsocks的替代软件。&lt;/p&gt;
-&lt;/blockquote&gt;" class="bds_more" data-cmd="more">分享到</a>
+			<a data-url="http://clovey.party/2018/01/03/landscape主题修改/" data-excerpt="" class="bds_more" data-cmd="more">分享到</a>
 		</div>
 	
 	  
 	  <!--显示tags-->
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shadowsocks/">shadowsocks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络技术/">网络技术</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo主题/">hexo主题</a></li></ul>
 
     </footer>
   </div>
@@ -165,19 +201,10 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/12/27/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/07/17/基于hexo搭建github博客/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/12/28/保险知识md/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">基于hexo搭建github博客</div>
+      <div class="article-nav-title">保险常识</div>
     </a>
   
 </nav>

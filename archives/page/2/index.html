@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!--根据当前显示页面，修改网页title-->
   
-  <title>Tag: 网络技术 | xiaer</title>
+  <title>归档 | xiaer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!--订阅feed，定义路径等等-->
  
@@ -74,7 +74,7 @@
 
       <div class="outer clear-float">
 		<!--body被响应模版替换，如首页时调用index.ejs模版！-->
-        <section id="main"><!--标签-->
+        <section id="main"><!--归档-->
 <!--归档-->
 
 <!--根据是否为首页显示不同内容-->
@@ -85,6 +85,42 @@
   
     
     
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <!--文档文章，难道是文档分类时候显示标题和时间？-->
+<article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <!--文章发布日期-->
+
+<a href="/2017/12/27/hello-world/" class="archive-article-date">
+  <time datetime="2017-12-27T13:15:39.379Z" itemprop="datePublished">12月 27</time>
+</a>
+      <!--标题-->
+
+
+	<!--非引用文章-->
+  
+	<!--如果在首页，则标题可以链接到正文！-->
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/12/27/hello-world/">Hello World</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+    
+    
+      
+        </div></section>
       
       
       <section class="archives-wrap">
@@ -117,38 +153,17 @@
   </div>
 </article>
   
-    
-    
-    <!--文档文章，难道是文档分类时候显示标题和时间？-->
-<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <!--文章发布日期-->
-
-<a href="/2016/07/17/基于hexo搭建github博客/" class="archive-article-date">
-  <time datetime="2016-07-17T12:04:44.000Z" itemprop="datePublished">7月 17</time>
-</a>
-      <!--标题-->
-
-
-	<!--非引用文章-->
-  
-	<!--如果在首页，则标题可以链接到正文！-->
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/17/基于hexo搭建github博客/">基于hexo搭建github博客</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
   
     </div></section>
   
 
 
 <!--分页处理，即文章下的上一篇、下一篇-->
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/archives/">&laquo; 上一页</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/3/">下一页 &raquo;</a>
+  </nav>
 
 </section>
         <!--侧边栏，导入插件-->

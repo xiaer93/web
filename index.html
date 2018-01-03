@@ -1,3 +1,4 @@
+<!--模版入口-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +16,7 @@
     <link rel="icon" href="/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   <!--导入样式-->
   <link rel="stylesheet" href="/css/layout.css">
@@ -72,16 +73,15 @@
 
 
       <div class="outer clear-float">
-        <section id="main"><!--首页，index为true声明首页-->
-
-<!--档案-->
+		<!--body被响应模版替换，如首页时调用index.ejs模版！-->
+        <section id="main"><!--首页-->
+<!--归档-->
 
 <!--根据是否为首页显示不同内容-->
 
-	<!--page.posts首页文章的数量-->
+	<!--page.posts文章-->
   
     <!--文章-->
-
 <article id="post-保险知识md" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <!--文章发布日期-->
@@ -122,14 +122,14 @@
         <blockquote>
 <p>本文章的主要内容来自于<a href="https://www.zhihu.com/question/22316395/answer/100909780?from=profile_answer_card" target="_blank" rel="noopener">如何用保险保障自己的一生？</a>（作者：李元霸），亦是我所知道保险知识的总结！</p>
 </blockquote>
-<p>##保险分类<br>保险主要分为社会保险和商业保险。社保提供的是基础医疗养老保障；商业保险提供的是更完善的保障。两者之间相互补充，不可替代。</p>
-<p>##保险监管<br><strong>中国是目前世界上保险业监管水平最全面最先进的国家之一，对所购买的商业保险绝对可以放心持有。另外只要<em>符合保险条款中保险事故定义的理赔</em>，无论大公司小公司，保险公司一定会理赔。各地保监局也会提供消费者保护机制，在纠纷的时候可以直接寻求服务。</strong></p>
+<h2 id="保险分类"><a href="#保险分类" class="headerlink" title="保险分类"></a>保险分类</h2><p>保险主要分为社会保险和商业保险。社保提供的是基础医疗养老保障；商业保险提供的是更完善的保障。两者之间相互补充，不可替代。</p>
+<h2 id="保险监管"><a href="#保险监管" class="headerlink" title="保险监管"></a>保险监管</h2><p><strong>中国是目前世界上保险业监管水平最全面最先进的国家之一，对所购买的商业保险绝对可以放心持有。另外只要<em>符合保险条款中保险事故定义的理赔</em>，无论大公司小公司，保险公司一定会理赔。各地保监局也会提供消费者保护机制，在纠纷的时候可以直接寻求服务。</strong></p>
 <ol>
 <li>保监会对保险公司监管严厉，设有多级预警的<strong>偿付能力</strong>监管制度。</li>
 <li>如果保险公司破产，政府设有<strong>保险保障基金</strong>来保证保险你的保单安全。</li>
 <li>根据现有保险法及相关规定，保监会可以指定已经破产的保险公司的仍然有效的保单及其保单准备金转由另一家或多家保险公司承保。</li>
 </ol>
-<p>##商业保险（只关注寿险）<br>商业保险主要分为财险和寿险，而人身险产品按照保险责任只分为三种：寿险、健康险和意外险，更细划分就一共有6种大类的保险：团体寿险、团体健康险、团体意外险、个人寿险、个人健康险和个人意外险。</p>
+<h2 id="商业保险（只关注寿险）"><a href="#商业保险（只关注寿险）" class="headerlink" title="商业保险（只关注寿险）"></a>商业保险（只关注寿险）</h2><p>商业保险主要分为财险和寿险，而人身险产品按照保险责任只分为三种：寿险、健康险和意外险，更细划分就一共有6种大类的保险：团体寿险、团体健康险、团体意外险、个人寿险、个人健康险和个人意外险。</p>
 <p>商业保险公司有三个利润来源，也就是我们常说的三差：死差（死亡等发生率差）、利差（投资收益差）、费差（运营费用差），其中最主要的利润来自于利差。</p>
 <p>商业保险承保的基本原则是被保险人在投保时必须是健康体或标准体。如果投保人的条件符合核保要求了，就代表保险公司愿意承保你的风险；如果不符合核保要求的投保件将会被拒保、延迟承保、加费承保或者限制保障责任等等。</p>
 <p>重大疾病中的最基本的25种重疾的定义是由中国保险行业协会和中国医师协会联合制定发布的，其中恶性肿瘤、急性心肌梗塞、脑中风后遗症、重大器官移植术或造血干细胞移植术、冠状动脉搭桥术和终末期肾病这6种核心重疾，占一般人群一辈子能患上重疾的80%-85%。<a href="http://www.china-insurance.com/zhuanti/zhongjixian/%D6%D8%BC%B2%B2%A1%D7%A8%CC%E2.pdf" target="_blank" rel="noopener">重大疾病保险的疾病定义使用规范</a></p>
@@ -144,10 +144,32 @@
         
       
     </div>
+	
     <footer class="article-footer clear-float">
-	<!--上一篇文章-->
-      <a data-url="http://clovey.party/2017/12/28/保险知识md/" data-id="cjbt3v0yp0004tsoa3dkg3yrt" class="article-share-link">Share</a>
-      <!--评论链接？-->
+	  <!--分享文章-->
+	 
+		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
+			<a data-url="http://clovey.party/2017/12/28/保险知识md/" data-excerpt="&lt;blockquote&gt;
+&lt;p&gt;本文章的主要内容来自于&lt;a href=&#34;https://www.zhihu.com/question/22316395/answer/100909780?from=profile_answer_card&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;如何用保险保障自己的一生？&lt;/a&gt;（作者：李元霸），亦是我所知道保险知识的总结！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;保险分类&#34;&gt;&lt;a href=&#34;#保险分类&#34; class=&#34;headerlink&#34; title=&#34;保险分类&#34;&gt;&lt;/a&gt;保险分类&lt;/h2&gt;&lt;p&gt;保险主要分为社会保险和商业保险。社保提供的是基础医疗养老保障；商业保险提供的是更完善的保障。两者之间相互补充，不可替代。&lt;/p&gt;
+&lt;h2 id=&#34;保险监管&#34;&gt;&lt;a href=&#34;#保险监管&#34; class=&#34;headerlink&#34; title=&#34;保险监管&#34;&gt;&lt;/a&gt;保险监管&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;中国是目前世界上保险业监管水平最全面最先进的国家之一，对所购买的商业保险绝对可以放心持有。另外只要&lt;em&gt;符合保险条款中保险事故定义的理赔&lt;/em&gt;，无论大公司小公司，保险公司一定会理赔。各地保监局也会提供消费者保护机制，在纠纷的时候可以直接寻求服务。&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;保监会对保险公司监管严厉，设有多级预警的&lt;strong&gt;偿付能力&lt;/strong&gt;监管制度。&lt;/li&gt;
+&lt;li&gt;如果保险公司破产，政府设有&lt;strong&gt;保险保障基金&lt;/strong&gt;来保证保险你的保单安全。&lt;/li&gt;
+&lt;li&gt;根据现有保险法及相关规定，保监会可以指定已经破产的保险公司的仍然有效的保单及其保单准备金转由另一家或多家保险公司承保。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;商业保险（只关注寿险）&#34;&gt;&lt;a href=&#34;#商业保险（只关注寿险）&#34; class=&#34;headerlink&#34; title=&#34;商业保险（只关注寿险）&#34;&gt;&lt;/a&gt;商业保险（只关注寿险）&lt;/h2&gt;&lt;p&gt;商业保险主要分为财险和寿险，而人身险产品按照保险责任只分为三种：寿险、健康险和意外险，更细划分就一共有6种大类的保险：团体寿险、团体健康险、团体意外险、个人寿险、个人健康险和个人意外险。&lt;/p&gt;
+&lt;p&gt;商业保险公司有三个利润来源，也就是我们常说的三差：死差（死亡等发生率差）、利差（投资收益差）、费差（运营费用差），其中最主要的利润来自于利差。&lt;/p&gt;
+&lt;p&gt;商业保险承保的基本原则是被保险人在投保时必须是健康体或标准体。如果投保人的条件符合核保要求了，就代表保险公司愿意承保你的风险；如果不符合核保要求的投保件将会被拒保、延迟承保、加费承保或者限制保障责任等等。&lt;/p&gt;
+&lt;p&gt;重大疾病中的最基本的25种重疾的定义是由中国保险行业协会和中国医师协会联合制定发布的，其中恶性肿瘤、急性心肌梗塞、脑中风后遗症、重大器官移植术或造血干细胞移植术、冠状动脉搭桥术和终末期肾病这6种核心重疾，占一般人群一辈子能患上重疾的80%-85%。&lt;a href=&#34;http://www.china-insurance.com/zhuanti/zhongjixian/%D6%D8%BC%B2%B2%A1%D7%A8%CC%E2.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;重大疾病保险的疾病定义使用规范&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;重疾保险包括长期险和短期险，长期险：保险期间为一年以上的保险；短期险：保险期间为一年及以下的保险。&lt;em&gt;部分短期险提供续保，但是续保的费率不能保证（续保费用可能会变得非常贵），如果有长期保险产品，就购买长期的！&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;重大疾病险按给付方式分：提前给付型（重疾或身故给付保障金，赔一次）、额外给付型（发生重疾给付重疾保障金，后续如身故给付身故保障金，赔2次）&lt;/p&gt;
+&lt;p&gt;团体保险一般要求以传统的公司或工作单位为整体进行集体投保。团体险保险最大的优点是便宜（可能比同类型个险便宜一半），而且还可以给一定比例高风险人员共同购买。&lt;/p&gt;" class="bds_more" data-cmd="more">分享到</a>
+		</div>
+		<!--如果不是首页，显示浮窗分享-->
+		
+	
 	  
 	  <!--显示tags-->
       
@@ -155,7 +177,7 @@
 
     </footer>
   </div>
-  <!--如果不是首页显示文章导航-->
+  <!--显示文章导航-->
   
 </article>
 
@@ -163,7 +185,6 @@
 
   
     <!--文章-->
-
 <article id="post-VBOX搭建安卓虚拟机" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <!--文章发布日期-->
@@ -205,16 +226,22 @@
 
       
     </div>
+	
     <footer class="article-footer clear-float">
-	<!--上一篇文章-->
-      <a data-url="http://clovey.party/2017/12/28/VBOX搭建安卓虚拟机/" data-id="cjbt3v0yl0003tsoa779i93oe" class="article-share-link">Share</a>
-      <!--评论链接？-->
+	  <!--分享文章-->
+	 
+		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
+			<a data-url="http://clovey.party/2017/12/28/VBOX搭建安卓虚拟机/" data-excerpt="" class="bds_more" data-cmd="more">分享到</a>
+		</div>
+		<!--如果不是首页，显示浮窗分享-->
+		
+	
 	  
 	  <!--显示tags-->
       
     </footer>
   </div>
-  <!--如果不是首页显示文章导航-->
+  <!--显示文章导航-->
   
 </article>
 
@@ -297,12 +324,15 @@
 </aside>
       </div>
       <!--定义博客footer-->
-
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 xiaer93<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      &copy; 2018 xiaer93<br>
+	  <!--引入访问统计-->
+	  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">
+		本站总访问量<span id="busuanzi_value_site_pv"></span>次
+	  </span>
     </div>
   </div>
 </footer>
@@ -336,6 +366,14 @@
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
+
+
+
+
+<script>
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
 
 
 

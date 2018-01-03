@@ -1,3 +1,4 @@
+<!--模版入口-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +16,7 @@
     <link rel="icon" href="/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   <!--导入样式-->
   <link rel="stylesheet" href="/css/layout.css">
@@ -72,10 +73,9 @@
 
 
       <div class="outer clear-float">
+		<!--body被响应模版替换，如首页时调用index.ejs模版！-->
         <section id="main"><!--文章，调用article模版-->
-
 <!--文章-->
-
 <article id="post-基于hexo搭建github博客" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <!--文章发布日期-->
@@ -197,10 +197,35 @@
 
       
     </div>
+	
     <footer class="article-footer clear-float">
-	<!--上一篇文章-->
-      <a data-url="http://clovey.party/2016/07/17/基于hexo搭建github博客/" data-id="cjbt3v0yt0005tsoa2r9lx1dp" class="article-share-link">Share</a>
-      <!--评论链接？-->
+	  <!--分享文章-->
+	 
+		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
+			<a data-url="http://clovey.party/2016/07/17/基于hexo搭建github博客/" data-excerpt="&lt;p&gt;&lt;strong&gt;Gitpage&lt;/strong&gt;，你值得拥有！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一直有搭建个人博客的想法，一是学习网页编程，二是为了显摆o_O。最开始以为要购买云服务器才能搭建个人博客，要学会Html/CSS，还有MySql数据库。可是这些都太难了，前不久偶然看到Github提供Gitpage服务，可以用来部署个人博客，经过搜索搜索，最后选择利用Hexo搭建博客，部署在Github。经过折腾，果然成功啦，哇咔咔，以后常写写博客，万一有什么奇妙用处。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;开发环境&#34;&gt;&lt;a href=&#34;#开发环境&#34; class=&#34;headerlink&#34; title=&#34;开发环境&#34;&gt;&lt;/a&gt;开发环境&lt;/h2&gt;&lt;p&gt;PS:我的电脑是&lt;strong&gt;win7 64位操作系统&lt;/strong&gt;。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;nodejs。。。安装nodejs最新的版本，老版本可能会存在各种问题，进入&lt;a href=&#34;http://nodejs.cn/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;nodejs中文官网&lt;/a&gt;，下载相关软件。&lt;/li&gt;
+&lt;li&gt;Git    。。。安装git软件，用于在github部署博客，进入&lt;a href=&#34;https://www.git-scm.com/download/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;git&lt;/a&gt;，下载相关软件。&lt;/li&gt;
+&lt;li&gt;Hexo    。。。安装Hexo软件，在Git Bash（命令行）输入&lt;code&gt;npm install -g hexo&lt;/code&gt;，系统自动安装Hexo。&lt;/li&gt;
+&lt;/ol&gt;" class="bds_more" data-cmd="more">分享到</a>
+		</div>
+		<!--如果不是首页，显示浮窗分享-->
+		
+			<script>
+				window._bd_share_config=window._bd_share_config || {};
+				window._bd_share_config.slide=[{	   
+						bdImg : 0,
+						bdPos : "right",
+						bdTop : 100
+					}]
+				
+			</script>
+		
+	
 	  
 	  <!--显示tags-->
       
@@ -208,7 +233,7 @@
 
     </footer>
   </div>
-  <!--如果不是首页显示文章导航-->
+  <!--显示文章导航-->
   
     <!--文章末尾处导航，上一篇、下一篇-->
 
@@ -324,12 +349,15 @@
 </aside>
       </div>
       <!--定义博客footer-->
-
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 xiaer93<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      &copy; 2018 xiaer93<br>
+	  <!--引入访问统计-->
+	  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">
+		本站总访问量<span id="busuanzi_value_site_pv"></span>次
+	  </span>
     </div>
   </div>
 </footer>
@@ -363,6 +391,14 @@
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
+
+
+
+
+<script>
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
 
 
 

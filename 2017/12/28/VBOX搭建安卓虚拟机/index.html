@@ -1,3 +1,4 @@
+<!--模版入口-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +16,7 @@
     <link rel="icon" href="/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   <!--导入样式-->
   <link rel="stylesheet" href="/css/layout.css">
@@ -72,10 +73,9 @@
 
 
       <div class="outer clear-float">
+		<!--body被响应模版替换，如首页时调用index.ejs模版！-->
         <section id="main"><!--文章，调用article模版-->
-
 <!--文章-->
-
 <article id="post-VBOX搭建安卓虚拟机" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <!--文章发布日期-->
@@ -116,16 +116,32 @@
 
       
     </div>
+	
     <footer class="article-footer clear-float">
-	<!--上一篇文章-->
-      <a data-url="http://clovey.party/2017/12/28/VBOX搭建安卓虚拟机/" data-id="cjbt3v0yl0003tsoa779i93oe" class="article-share-link">Share</a>
-      <!--评论链接？-->
+	  <!--分享文章-->
+	 
+		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
+			<a data-url="http://clovey.party/2017/12/28/VBOX搭建安卓虚拟机/" data-excerpt="" class="bds_more" data-cmd="more">分享到</a>
+		</div>
+		<!--如果不是首页，显示浮窗分享-->
+		
+			<script>
+				window._bd_share_config=window._bd_share_config || {};
+				window._bd_share_config.slide=[{	   
+						bdImg : 0,
+						bdPos : "right",
+						bdTop : 100
+					}]
+				
+			</script>
+		
+	
 	  
 	  <!--显示tags-->
       
     </footer>
   </div>
-  <!--如果不是首页显示文章导航-->
+  <!--显示文章导航-->
   
     <!--文章末尾处导航，上一篇、下一篇-->
 
@@ -246,12 +262,15 @@
 </aside>
       </div>
       <!--定义博客footer-->
-
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 xiaer93<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      &copy; 2018 xiaer93<br>
+	  <!--引入访问统计-->
+	  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">
+		本站总访问量<span id="busuanzi_value_site_pv"></span>次
+	  </span>
     </div>
   </div>
 </footer>
@@ -285,6 +304,14 @@
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
+
+
+
+
+<script>
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
 
 
 

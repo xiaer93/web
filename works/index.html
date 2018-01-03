@@ -1,3 +1,4 @@
+<!--模版入口-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +16,7 @@
     <link rel="icon" href="/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   <!--导入样式-->
   <link rel="stylesheet" href="/css/layout.css">
@@ -72,7 +73,11 @@
 
 
       <div class="outer clear-float">
+		<!--body被响应模版替换，如首页时调用index.ejs模版！-->
         <section id="main"><!--work.md应该指向work.ejs-->
+
+<!--作品集，通过读取blog\source\_data\project.json的信息，生成界面-->
+
 
 <article class="work-inner">
   <header class="clear-float">
@@ -180,12 +185,15 @@
 </aside>
       </div>
       <!--定义博客footer-->
-
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 xiaer93<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      &copy; 2018 xiaer93<br>
+	  <!--引入访问统计-->
+	  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">
+		本站总访问量<span id="busuanzi_value_site_pv"></span>次
+	  </span>
     </div>
   </div>
 </footer>
@@ -219,6 +227,14 @@
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
+
+
+
+
+<script>
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
 
 
 

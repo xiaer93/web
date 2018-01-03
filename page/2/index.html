@@ -1,3 +1,4 @@
+<!--模版入口-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +16,7 @@
     <link rel="icon" href="/favicon.png">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
   <!--导入样式-->
   <link rel="stylesheet" href="/css/layout.css">
@@ -72,16 +73,15 @@
 
 
       <div class="outer clear-float">
-        <section id="main"><!--首页，index为true声明首页-->
-
-<!--档案-->
+		<!--body被响应模版替换，如首页时调用index.ejs模版！-->
+        <section id="main"><!--首页-->
+<!--归档-->
 
 <!--根据是否为首页显示不同内容-->
 
-	<!--page.posts首页文章的数量-->
+	<!--page.posts文章-->
   
     <!--文章-->
-
 <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <!--文章发布日期-->
@@ -125,16 +125,23 @@
         
       
     </div>
+	
     <footer class="article-footer clear-float">
-	<!--上一篇文章-->
-      <a data-url="http://clovey.party/2017/12/27/hello-world/" data-id="cjbt3v0yc0001tsoah3pd6a39" class="article-share-link">Share</a>
-      <!--评论链接？-->
+	  <!--分享文章-->
+	 
+		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
+			<a data-url="http://clovey.party/2017/12/27/hello-world/" data-excerpt="&lt;p&gt;Welcome to &lt;a href=&#34;https://hexo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&#34;https://hexo.io/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&#34;https://hexo.io/docs/troubleshooting.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&#34;https://github.com/hexojs/hexo/issues&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;Quick-Start&#34;&gt;&lt;a href=&#34;#Quick-Start&#34; class=&#34;headerlink&#34; title=&#34;Quick Start&#34;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&#34;Create-a-new-post&#34;&gt;&lt;a href=&#34;#Create-a-new-post&#34; class=&#34;headerlink&#34; title=&#34;Create a new post&#34;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&#34;My New Post&#34;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;" class="bds_more" data-cmd="more">分享到</a>
+		</div>
+		<!--如果不是首页，显示浮窗分享-->
+		
+	
 	  
 	  <!--显示tags-->
       
     </footer>
   </div>
-  <!--如果不是首页显示文章导航-->
+  <!--显示文章导航-->
   
 </article>
 
@@ -142,7 +149,6 @@
 
   
     <!--文章-->
-
 <article id="post-科学上网神器shadowsocks" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <!--文章发布日期-->
@@ -198,10 +204,25 @@
         
       
     </div>
+	
     <footer class="article-footer clear-float">
-	<!--上一篇文章-->
-      <a data-url="http://clovey.party/2016/07/29/科学上网神器shadowsocks/" data-id="cjbt3v0z10008tsoabji584jp" class="article-share-link">Share</a>
-      <!--评论链接？-->
+	  <!--分享文章-->
+	 
+		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
+			<a data-url="http://clovey.party/2016/07/29/科学上网神器shadowsocks/" data-excerpt="&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;我希望有一天我能够住在一个拥有随意编写任何我喜欢的代码的国家而无需为之恐惧。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;我希望你们将来能为互联网自由贡献出了不起的东西。&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;http://i1.piimg.com/4851/db0b0d073bc14977.png&#34; alt=&#34;clowwindy&#34;&gt;&lt;br&gt;一直听说我们有个墙，也有个饭墙的冲动，谁让&lt;strong&gt;哪里有压迫哪里就有反抗&lt;/strong&gt;呢？之前一直用的“自由门”软件，但是感觉很不稳定，大多数时间用不。折腾了好久，找各种饭墙软件啦，还有VPN等等，但是都感觉有点不靠谱，网友评论也是各种各种。直到最近发现了Shadowsocks，瞬间感觉有希望了，查看维基百科，居然还能有这么心酸的故事。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Shadowsocks（中文名称：影梭）是使用Python等语言开发的、基于Apache许可证开源的代理软件。Shadowsocks使用socks5代理，用于保护网络流量。在中国大陆被广泛用于突破防火长城（GFW），以浏览被封锁的内容。&lt;/p&gt;
+&lt;p&gt;Shadowsocks分为服务器端和客户端。在使用之前，需要先将服务器端部署在支持Python的服务器上面，然后通过客户端连接并创建本地代理。&lt;/p&gt;
+&lt;p&gt;2015年8月22日，Shadowsocks原作者Clowwindy因受到中国政府的压力，停止维护此项目。但开发已有人接管，仍有更新陆续推送。ShadowsocksR可作为Shadowsocks的替代软件。&lt;/p&gt;
+&lt;/blockquote&gt;" class="bds_more" data-cmd="more">分享到</a>
+		</div>
+		<!--如果不是首页，显示浮窗分享-->
+		
+	
 	  
 	  <!--显示tags-->
       
@@ -209,7 +230,7 @@
 
     </footer>
   </div>
-  <!--如果不是首页显示文章导航-->
+  <!--显示文章导航-->
   
 </article>
 
@@ -292,12 +313,15 @@
 </aside>
       </div>
       <!--定义博客footer-->
-
 <footer id="footer">
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2017 xiaer93<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      &copy; 2018 xiaer93<br>
+	  <!--引入访问统计-->
+	  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">
+		本站总访问量<span id="busuanzi_value_site_pv"></span>次
+	  </span>
     </div>
   </div>
 </footer>
@@ -331,6 +355,14 @@
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
+
+
+
+
+<script>
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
 
 
 

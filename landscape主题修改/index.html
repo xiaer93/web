@@ -121,8 +121,9 @@
 <li>layout_partial，这里为局部模版区域，修改html代码</li>
 <li>source\css，这里为样式区域，修改css代码</li>
 <li>source\js，这里为javascript区域，修改js代码</li>
-<li>_config.yml，这是主题配置信息    </li>
+<li>_config.yml，这是主题配置信息                </li>
 </ul>
+<a id="more"></a>
 <h3 id="1-新增自定义菜单works，支持展示个人作品"><a href="#1-新增自定义菜单works，支持展示个人作品" class="headerlink" title="1. 新增自定义菜单works，支持展示个人作品"></a>1. 新增自定义菜单works，支持展示个人作品</h3><ul>
 <li><p>使用hexo3.0<a href="https://hexo.io/zh-cn/docs/data-files.html" target="_blank" rel="noopener">数据文件</a>功能，通过project.json传入作品集信息！</p>
 <pre><code>[
@@ -177,6 +178,10 @@
 <h3 id="4-添加来必力评论"><a href="#4-添加来必力评论" class="headerlink" title="4. 添加来必力评论"></a>4. 添加来必力评论</h3><ul>
 <li>添加文章评论功能，<a href="http://laibili.com.cn/introduce" target="_blank" rel="noopener">来必力官网</a></li>
 </ul>
+<h3 id="5-将网站提交至百度站长平台"><a href="#5-将网站提交至百度站长平台" class="headerlink" title="5. 将网站提交至百度站长平台"></a>5. 将网站提交至百度站长平台</h3><ul>
+<li>github禁止百度抓取信息，因此需要部署在coding平台上！</li>
+<li>将网站提交至百度站长平台！~</li>
+</ul>
 
       
     </div>
@@ -185,7 +190,15 @@
 	  <!--分享文章-->
 	 
 		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
-			<a data-url="http://clovey.party/landscape主题修改/" data-excerpt="" class="bds_more" data-cmd="more">分享到</a>
+			<a data-url="http://www.clovey.party/landscape主题修改/" data-excerpt="&lt;blockquote&gt;
+&lt;p&gt;hexo原生主题看起来不是很满意，因此对其进行了一些修改！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;主要修改&#34;&gt;&lt;a href=&#34;#主要修改&#34; class=&#34;headerlink&#34; title=&#34;主要修改&#34;&gt;&lt;/a&gt;主要修改&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;layout_partial，这里为局部模版区域，修改html代码&lt;/li&gt;
+&lt;li&gt;source\css，这里为样式区域，修改css代码&lt;/li&gt;
+&lt;li&gt;source\js，这里为javascript区域，修改js代码&lt;/li&gt;
+&lt;li&gt;_config.yml，这是主题配置信息                &lt;/li&gt;
+&lt;/ul&gt;" class="bds_more" data-cmd="more">分享到</a>
 		</div>
 	
 	  
@@ -348,6 +361,24 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();
+</script>
+
+
+<!--引入百度自动推送-->
+<!--百度自动推送-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
 </script>
 
 

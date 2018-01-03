@@ -120,7 +120,6 @@
     <div class="article-entry" itemprop="articleBody">
 	<!--如果文章摘要存在且是首页展示-->
       
-	  <!--直接显示文章内容-->
         <blockquote>
 <p>hexo原生主题看起来不是很满意，因此对其进行了一些修改！</p>
 </blockquote>
@@ -128,63 +127,14 @@
 <li>layout_partial，这里为局部模版区域，修改html代码</li>
 <li>source\css，这里为样式区域，修改css代码</li>
 <li>source\js，这里为javascript区域，修改js代码</li>
-<li>_config.yml，这是主题配置信息    </li>
+<li>_config.yml，这是主题配置信息                </li>
 </ul>
-<h3 id="1-新增自定义菜单works，支持展示个人作品"><a href="#1-新增自定义菜单works，支持展示个人作品" class="headerlink" title="1. 新增自定义菜单works，支持展示个人作品"></a>1. 新增自定义菜单works，支持展示个人作品</h3><ul>
-<li><p>使用hexo3.0<a href="https://hexo.io/zh-cn/docs/data-files.html" target="_blank" rel="noopener">数据文件</a>功能，通过project.json传入作品集信息！</p>
-<pre><code>[
-    {
-        &quot;name&quot;:&quot;jq插件之日期选择器&quot;,
-        &quot;date&quot;:&quot;2017-5&quot;,
-        &quot;url&quot;:&quot;#&quot;,
-        &quot;img&quot;:&quot;http://o7bkkhiex.bkt.clouddn.com/item-apple.jpg&quot;,
-        &quot;title&quot;:&quot;jq插件&quot;,
-        &quot;description&quot;:&quot;jq插件实现的日历选择器&quot;
-    }
-]
-</code></pre></li>
-<li><p>添加works.ejs模版</p>
-<pre><code>&lt;% site.data.project.forEach(function (work,index) {  %&gt;
-&lt;article class=&quot;work-inner&quot;&gt;
-  &lt;header class=&quot;clear-float&quot;&gt;
-    &lt;h3&gt;&lt;%= work.name %&gt;&lt;/h3&gt;
-    &lt;address&gt;&lt;%= work.date%&gt;&lt;/address&gt;
-  &lt;/header&gt;
-  &lt;img src=&quot;&lt;%= work.img%&gt;&quot; alt=&quot;work.title&quot;&gt;
-  &lt;div class=&quot;description&quot;&gt;
-    &lt;h4&gt;&lt;%= work.title%&gt;&lt;/h4&gt;
-    &lt;p&gt;&lt;%= work.description%&gt;&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;footer&gt;
-    &lt;a class=&quot;work_link&quot; href=&quot;&lt;%= work.url%&gt;&quot;&gt;Open it！&lt;/a&gt;
-  &lt;/footer&gt;
-&lt;/article&gt;
-&lt;% }) %&gt;
-</code></pre></li>
-<li><p>添加自定义菜单</p>
-<pre><code>在命令行里面输入：hexo new page &quot;about&quot;
-
-然后你会发现source里面多了个目录about，里面有个index.md。
-
-接着把链接加上，themes/&lt;theme_name&gt;/_config.yml里面的menu一项，添加一行About: /about。
-</code></pre></li>
-<li><p>参考链接：</p>
-<ul>
-<li><a href="http://haojen.github.io/" target="_blank" rel="noopener">hexo模版之Anisina</a></li>
-<li><a href="https://segmentfault.com/q/1010000000618915" target="_blank" rel="noopener">hexo怎么在菜单添加页面和分类</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="2-添加百度统计"><a href="#2-添加百度统计" class="headerlink" title="2. 添加百度统计"></a>2. 添加百度统计</h3><ul>
-<li>直接阅读官方教程，将百度统计的相关js添加至html文档中！<a href="https://tongji.baidu.com/sc-web/image/code3.gif" target="_blank" rel="noopener">安装案例</a></li>
-</ul>
-<h3 id="3-添加不蒜子"><a href="#3-添加不蒜子" class="headerlink" title="3. 添加不蒜子"></a>3. 添加不蒜子</h3><ul>
-<li>不蒜子用于统计网站浏览量，并直接显示出来。直接阅读官网教程，<a href="http://busuanzi.ibruce.info/" target="_blank" rel="noopener">添加不蒜子功能</a></li>
-</ul>
-<h3 id="4-添加来必力评论"><a href="#4-添加来必力评论" class="headerlink" title="4. 添加来必力评论"></a>4. 添加来必力评论</h3><ul>
-<li>添加文章评论功能，<a href="http://laibili.com.cn/introduce" target="_blank" rel="noopener">来必力官网</a></li>
-</ul>
-
+        
+          <p class="article-more-link">
+		  <!--获取文章摘要的相对路径-->
+            <a href="/landscape主题修改/#more">Read More</a>
+          </p>
+        
       
     </div>
 	
@@ -192,7 +142,15 @@
 	  <!--分享文章-->
 	 
 		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
-			<a data-url="http://clovey.party/landscape主题修改/" data-excerpt="" class="bds_more" data-cmd="more">分享到</a>
+			<a data-url="http://www.clovey.party/landscape主题修改/" data-excerpt="&lt;blockquote&gt;
+&lt;p&gt;hexo原生主题看起来不是很满意，因此对其进行了一些修改！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;主要修改&#34;&gt;&lt;a href=&#34;#主要修改&#34; class=&#34;headerlink&#34; title=&#34;主要修改&#34;&gt;&lt;/a&gt;主要修改&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;layout_partial，这里为局部模版区域，修改html代码&lt;/li&gt;
+&lt;li&gt;source\css，这里为样式区域，修改css代码&lt;/li&gt;
+&lt;li&gt;source\js，这里为javascript区域，修改js代码&lt;/li&gt;
+&lt;li&gt;_config.yml，这是主题配置信息                &lt;/li&gt;
+&lt;/ul&gt;" class="bds_more" data-cmd="more">分享到</a>
 		</div>
 	
 	  
@@ -277,7 +235,7 @@
 	  <!--分享文章-->
 	 
 		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
-			<a data-url="http://clovey.party/保险知识md/" data-excerpt="&lt;h1 id=&#34;保险常识&#34;&gt;&lt;a href=&#34;#保险常识&#34; class=&#34;headerlink&#34; title=&#34;保险常识&#34;&gt;&lt;/a&gt;保险常识&lt;/h1&gt;&lt;blockquote&gt;
+			<a data-url="http://www.clovey.party/保险知识md/" data-excerpt="&lt;h1 id=&#34;保险常识&#34;&gt;&lt;a href=&#34;#保险常识&#34; class=&#34;headerlink&#34; title=&#34;保险常识&#34;&gt;&lt;/a&gt;保险常识&lt;/h1&gt;&lt;blockquote&gt;
 &lt;p&gt;本文章的主要内容来自于&lt;a href=&#34;https://www.zhihu.com/question/22316395/answer/100909780?from=profile_answer_card&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;如何用保险保障自己的一生？&lt;/a&gt;（作者：李元霸），亦是我所知道保险知识的总结！&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;保险分类&#34;&gt;&lt;a href=&#34;#保险分类&#34; class=&#34;headerlink&#34; title=&#34;保险分类&#34;&gt;&lt;/a&gt;保险分类&lt;/h2&gt;&lt;p&gt;保险主要分为社会保险和商业保险。社保提供的是基础医疗养老保障；商业保险提供的是更完善的保障。两者之间相互补充，不可替代。&lt;/p&gt;
@@ -427,6 +385,24 @@
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();
+</script>
+
+
+<!--引入百度自动推送-->
+<!--百度自动推送-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
 </script>
 
 

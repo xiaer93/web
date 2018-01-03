@@ -1,0 +1,39 @@
+/*清除样式*/
+*{
+  margin: 0;
+  padding:0;
+  outline: none;
+}
+
+@import "_variables.less";
+
+body {
+  background: #eee;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#main{
+	float: left;
+	box-sizing: border-box;
+	width: @mainwidth - @marginwidth;
+	margin-left: @marginwidth / 2;
+	margin-right: @marginwidth / 2;
+}
+#sidebar{
+  float: left;
+  box-sizing: border-box;
+  width: 100% - @mainwidth - @marginwidth * 2;
+  margin-left: @marginwidth / 2;
+  margin-right: @marginwidth / 2;
+}
+
+
+@import "_partial/public.less";
+@import "_partial/archives.less";
+@import "_partial/article.less";
+@import "_partial/header.less";
+@import "_partial/footer.less";
+@import "_partial/widget.less";
+
+@import "_mobile.less";
+

@@ -36,11 +36,13 @@
 				onBeforeClick:function(cmd,config){
 					config.bdUrl=url;
 					config.bdDesc=desc;
-				},
+				}
+			},
+				
 		share:[{
 				"tag":"share_1",
 				"bdSize":24
-			}];
+			}]
 	};
 
 			/*

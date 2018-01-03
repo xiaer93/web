@@ -26,8 +26,8 @@
 	
 	var url=undefined,
 		desc=undefined;
-	window._bd_share_config=window._bd_share_config || {};
-	window._bd_share_config.common={
+	window._bd_share_config={
+		common:{
 				bdDesc : desc,	
 				bdUrl : url, 	
 				bdSign:true,
@@ -36,12 +36,13 @@
 				onBeforeClick:function(cmd,config){
 					config.bdUrl=url;
 					config.bdDesc=desc;
-				}
-			};
-	window._bd_share_config.share=[{
+				},
+		share:[{
 				"tag":"share_1",
 				"bdSize":24
 			}];
+	};
+
 			/*
 	浮窗分享按钮！
 	slide:[{	   

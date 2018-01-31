@@ -34,9 +34,6 @@
     <div id="header-title-wrap">
       <div id="header-title" class="inner">
         <div id="log-wrap"></div>
-        <h2 id="title-wrap">
-          <a href="/" id="title">xiaer</a>
-        </h2>
           
         <h2 id="subtitle-wrap">
           <a href="/" id="subtitle">不要抱怨,行动带来改变</a>
@@ -65,7 +62,8 @@
             <a id="nav-rss-link" class="nav-icon nav-menu" href="/atom.xml" title="RSS Feed"></a>
               
           </div>
-          <a class="nav-icon" href="#" onclick="null" id="mobile-nav-button"></a>
+		  <!--通过设置href属性值（避免#），阻止页面跳转至顶部！-->
+          <a class="nav-icon" href="javascript:void(0)" onclick="null" id="mobile-nav-button"></a>
         </nav>
       </div>
     </div>
@@ -116,7 +114,7 @@
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>

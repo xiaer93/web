@@ -34,9 +34,6 @@
     <div id="header-title-wrap">
       <div id="header-title" class="inner">
         <div id="log-wrap"></div>
-        <h2 id="title-wrap">
-          <a href="/" id="title">xiaer</a>
-        </h2>
           
         <h2 id="subtitle-wrap">
           <a href="/" id="subtitle">不要抱怨,行动带来改变</a>
@@ -65,7 +62,8 @@
             <a id="nav-rss-link" class="nav-icon nav-menu" href="/atom.xml" title="RSS Feed"></a>
               
           </div>
-          <a class="nav-icon" href="#" onclick="null" id="mobile-nav-button"></a>
+		  <!--通过设置href属性值（避免#），阻止页面跳转至顶部！-->
+          <a class="nav-icon" href="javascript:void(0)" onclick="null" id="mobile-nav-button"></a>
         </nav>
       </div>
     </div>

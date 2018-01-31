@@ -34,9 +34,6 @@
     <div id="header-title-wrap">
       <div id="header-title" class="inner">
         <div id="log-wrap"></div>
-        <h2 id="title-wrap">
-          <a href="/" id="title">xiaer</a>
-        </h2>
           
         <h2 id="subtitle-wrap">
           <a href="/" id="subtitle">不要抱怨,行动带来改变</a>
@@ -65,7 +62,8 @@
             <a id="nav-rss-link" class="nav-icon nav-menu" href="/atom.xml" title="RSS Feed"></a>
               
           </div>
-          <a class="nav-icon" href="#" onclick="null" id="mobile-nav-button"></a>
+		  <!--通过设置href属性值（避免#），阻止页面跳转至顶部！-->
+          <a class="nav-icon" href="javascript:void(0)" onclick="null" id="mobile-nav-button"></a>
         </nav>
       </div>
     </div>
@@ -181,6 +179,10 @@
 <h3 id="5-将网站提交至百度站长平台"><a href="#5-将网站提交至百度站长平台" class="headerlink" title="5. 将网站提交至百度站长平台"></a>5. 将网站提交至百度站长平台</h3><ul>
 <li>github禁止百度抓取信息，因此需要部署在coding平台上！</li>
 <li>将网站提交至百度站长平台！~</li>
+<li>参考链接：<a href="https://zhuanlan.zhihu.com/p/28468742" target="_blank" rel="noopener">Hexo博客提交百度和Google收录</a></li>
+</ul>
+<h3 id="6-压缩网站"><a href="#6-压缩网站" class="headerlink" title="6. 压缩网站"></a>6. 压缩网站</h3><ul>
+<li>通过gulp压缩网站？？？</li>
 </ul>
 
       

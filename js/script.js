@@ -1,16 +1,44 @@
 (function($){
 	
 	$(document).ready(function () {
-	  $("header")
+	  $("#main-nav")
 		  .on("click","#mobile-nav-button",function () {
 			  $("#nav-wrap").slideDown("normal");
 			  $("#mobile-nav-mask").show();
 		  })
 		  .on("click","#mobile-nav-mask",function () {
 			  $("#nav-wrap").slideUp("normal");
-			  $("#mobile-nav-mask").hide();
+			 $("#mobile-nav-mask").hide();
 		  });
 		  
+	  var checkWidth=(function(){
+		  var timer=null;
+		  function s(){
+			  $("#nav-wrap").css('display','block');
+			  $("#mobile-nav-mask").hide();
+		  }
+		  function h(){
+			  $("#nav-wrap").css('display','none');
+			  $("#mobile-nav-mask").hide();
+		  }
+		  return function(type){
+			  clearTimeout(timer);
+			  timer=setTimeout(function(){
+				 if(type==='mobile'){
+					 s();
+				 } else{
+					 h();
+				 }
+			  },500);
+		  }
+	  })();
+	  $(window).resize(function(e){
+		  if($(this).outerWidth()>768){
+			  checkWidth('mobile');
+		  }else{
+			  checkWidth('px');
+		  }
+	  });
 		  
 	  $("#main")
 		.on("click",".bds_more",function(event){
@@ -24,6 +52,7 @@
 		});
 	});
 	
+	//百度分享
 	var url=undefined,
 		desc=undefined;
 	window._bd_share_config={

@@ -81,6 +81,132 @@
 	<!--page.posts文章-->
   
     <!--文章-->
+<article id="post-01" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <!--文章发布日期-->
+
+<a href="/01/" class="article-date">
+  <time datetime="2018-02-12T04:54:13.230Z" itemprop="datePublished">2018-02-12</time>
+</a>
+    <!--文章分类-->
+
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端总结/">前端总结</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    <!--文章图片-->
+
+
+	<!--post.link链接、或标题-->
+    
+      <header class="article-header">
+        <!--标题-->
+
+
+	<!--非引用文章-->
+  
+	<!--如果在首页，则标题可以链接到正文！-->
+    <h1 itemprop="name">
+      <a class="article-title" href="/01/">HTML介绍及常用标签</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+	<!--如果文章摘要存在且是首页展示-->
+      
+	  <!--直接显示文章内容-->
+        <p>简单介绍html的历史，及前端工作中常用的标签！</p>
+<h2 id="html源文档"><a href="#html源文档" class="headerlink" title="html源文档"></a>html源文档</h2><p>效果预览地址:</p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><h3 id="html的历史"><a href="#html的历史" class="headerlink" title="html的历史"></a>html的历史</h3><p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言，页面内可以包含图片、链接，甚至音乐、程序等非文字元素。html诞生于1993年，应用最广泛的为html4和xhtml，现如今更新至html5！浏览器对html4和xhtml支持良好，而对html5适配不完全。为此提几条具体建议：</p>
+<ul>
+<li>编写格式严格的html语法，了解html5的最新特性！</li>
+<li>所有标签属性加引号 ：\<p id="pp"></p></li>
+<li>所有标签使用小写形式</li>
+<li>属性值不进行省略：\<input type="checkbox" checked="checked"></li>
+<li>自闭合标签需要闭合：\<br></li>
+</ul>
+<h3 id="html文档结构"><a href="#html文档结构" class="headerlink" title="html文档结构"></a>html文档结构</h3><h3 id="浏览器渲染原理及流程"><a href="#浏览器渲染原理及流程" class="headerlink" title="浏览器渲染原理及流程"></a>浏览器渲染原理及流程</h3><ol>
+<li><p>原理和流程</p>
+<p> !(浏览器渲染原理及流程)[<a href="http://taligarsiel.com/Projects/webkitflow.png" target="_blank" rel="noopener">http://taligarsiel.com/Projects/webkitflow.png</a>]<br> 渲染引擎首先通过网络获得所请求文档的内容，接着对html文档进行渲染，渲染流程为：解析html以构建dom树和css树 -&gt; 构建render树（dom和css整合生成） -&gt; 布局render树（根据信息计算元素的位置） -&gt; 绘制render树（在屏幕绘制）<br> 了解渲染流程，首先理解几个基本概念：</p>
+<ul>
+<li>DOM Tree：浏览器将HTML解析成树形的数据结构。</li>
+<li>CSS Rule Tree：浏览器将CSS解析成树形的数据结构。</li>
+<li>Render Tree: DOM和CSSOM合并后生成Render Tree。</li>
+<li>layout: 有了Render Tree，浏览器已经能知道网页中有哪些节点、各个节点的CSS定义以及他们的从属关系，从而去计算出每个节点在屏幕中的位置。</li>
+<li>painting: 按照算出来的规则，通过显卡，把内容画到屏幕上。</li>
+<li>reflow（重排）：当浏览器发现某个部分发生了点变化影响了布局，需要倒回去重新渲染，内行称这个回退的过程叫 reflow。reflow 几乎是无法避免的。现在界面上流行的一些效果，比如树状目录的折叠、展开（实质上是元素的显 示与隐藏）等，都将引起浏览器的 reflow。鼠标滑过、点击……只要这些行为引起了页面上某些元素的占位面积、定位方式、边距等属性的变化，都会引起它内部、周围甚至整个页面的重新渲 染。通常我们都无法预估浏览器到底会 reflow 哪一部分的代码，它们都彼此相互影响着。</li>
+<li>repaint（重绘）：改变某个元素的背景色、文字颜色、边框颜色等等不影响它周围或内部布局的属性时，屏幕的一部分要重画，但是元素的几何尺寸没有变。<br>注意：上述过程是逐步完成的，但是渲染引擎会尽可能早的将内容呈现到屏幕！</li>
+</ul>
+</li>
+<li><p>重排和重绘对页面显示有何影响？</p>
+<p> 重排和重绘会迫使浏览器重新计算刷新页面，消耗计算机性能！良好的设计必须减少重排和重绘！具体规则如下：</p>
+<ul>
+<li>display:none会触发重排！visibility: hidden会触发重绘！</li>
+<li>改变元素定位方式position、浮动float、盒模型等都可能触发重排！</li>
+<li>改变元素的背景色等会触发重绘！</li>
+</ul>
+</li>
+<li><p>如何优化？</p>
+<ul>
+<li>减少修改html结构的次数，如文档片段、innerHtml等技术，对html只修改一次！</li>
+<li>避免在设置元素css属性后立即获取元素信息（如通过getComputedStyle获取宽高等信息），避免浏览器强制渲染页面！（现代浏览器对重排重绘进行了优化！）</li>
+</ul>
+</li>
+</ol>
+<h3 id="外部样式和外部脚本"><a href="#外部样式和外部脚本" class="headerlink" title="外部样式和外部脚本"></a>外部样式和外部脚本</h3><ol>
+<li><p>外部样式</p>
+<p> 通过link加载外部样式文件，css文件会并行下载，等待解析！具体规则如下：</p>
+<ul>
+<li>外部样式文件不会阻塞dom的解析，但是会阻塞页面渲染！</li>
+<li>外部样式文件不会阻塞外部脚本的加载，但会阻塞外部脚本的执行（外部样式必须加载完成后js才会执行！）。</li>
+</ul>
+</li>
+<li><p>外部脚本</p>
+<p> !(javascript)[<a href="http://segmentfault.com/img/bVcQV0" target="_blank" rel="noopener">http://segmentfault.com/img/bVcQV0</a>]<br> 通过script加载外部脚本文件，会阻塞html解析和渲染，等待js执行完后接着渲染！具体规则如下：</p>
+<ul>
+<li>外部脚本文件默认会阻塞html解析！</li>
+<li>async属性，指外部脚本文件异步加载，加载完后立即执行！</li>
+<li>defer属性，指外部脚本文件异步加载，加载完后等待html解析完后执行（DOMContentLoaded 事件之前）</li>
+</ul>
+</li>
+<li><p>如何减少渲染阻塞节点？（前端性能优化之一）</p>
+<ul>
+<li>通过在\<body>之前加载外部样式或脚本文件！（此时页面全部解析完成！）</body></li>
+<li>通过动态js代码加载外部文件，如在window.onload事件中调用loadScript函数！</li>
+<li>重要css样式或js代码可以直接卸载html文档当中！</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+	
+    <footer class="article-footer clear-float">
+	  <!--分享文章-->
+	 
+		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
+			<a data-url="http://www.clovey.party/01/" data-excerpt="" class="bds_more" data-cmd="more">分享到</a>
+		</div>
+	
+	  
+	  <!--显示tags-->
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
+
+    </footer>
+  </div>
+  <!--显示文章导航-->
+  
+</article>
+
+<!--如果不是首页，显示所有评论-->
+
+  
+    <!--文章-->
 <article id="post-landscape主题修改" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <!--文章发布日期-->
@@ -551,7 +677,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/投资理财/">投资理财</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/网络技术/">网络技术</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端总结/">前端总结</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资理财/">投资理财</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/网络技术/">网络技术</a></li></ul>
     </div>
   </div>
 
@@ -562,7 +688,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/hexo主题/" style="font-size: 10px;">hexo主题</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/理财/" style="font-size: 10px;">理财</a> <a href="/tags/网络技术/" style="font-size: 20px;">网络技术</a>
+      <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/hexo主题/" style="font-size: 10px;">hexo主题</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/理财/" style="font-size: 10px;">理财</a> <a href="/tags/网络技术/" style="font-size: 20px;">网络技术</a>
     </div>
   </div>
 
@@ -572,6 +698,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/01/">HTML介绍及常用标签</a>
+          </li>
         
           <li>
             <a href="/landscape主题修改/">landscape主题修改</a>
@@ -587,10 +717,6 @@
         
           <li>
             <a href="/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/科学上网神器shadowsocks/">科学上网神器shadowsocks</a>
           </li>
         
       </ul>

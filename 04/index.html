@@ -6,7 +6,7 @@
   <meta name="baidu-site-verification" content="jk1EoBpT2c" />
   <!--根据当前显示页面，修改网页title-->
   
-  <title>Tag: shadowsocks | xiaer</title>
+  <title>HTML之盒模型 | xiaer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!--订阅feed，定义路径等等-->
  
@@ -73,56 +73,151 @@
 
       <div class="outer clear-float">
 		<!--body被响应模版替换，如首页时调用index.ejs模版！-->
-        <section id="main"><!--标签-->
-<!--归档-->
+        <section id="main"><!--文章，调用article模版-->
+<!--文章-->
+<article id="post-04" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <!--文章发布日期-->
 
-<!--根据是否为首页显示不同内容-->
-
-
-	<!--不是首页时候显示如下：-->
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <!--文档文章，难道是文档分类时候显示标题和时间？-->
-<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <!--文章发布日期-->
-
-<a href="/科学上网神器shadowsocks/" class="archive-article-date">
-  <time datetime="2016-07-29T13:17:43.000Z" itemprop="datePublished">7月 29</time>
+<a href="/04/" class="article-date">
+  <time datetime="2018-03-02T06:01:13.094Z" itemprop="datePublished">2018-03-02</time>
 </a>
-      <!--标题-->
+    <!--文章分类-->
+
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端总结/">前端总结</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    <!--文章图片-->
+
+
+	<!--post.link链接、或标题-->
+    
+      <header class="article-header">
+        <!--标题-->
 
 
 	<!--非引用文章-->
   
-	<!--如果在首页，则标题可以链接到正文！-->
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/科学上网神器shadowsocks/">科学上网神器shadowsocks</a>
+    <h1 class="article-title" itemprop="name">
+      HTML之盒模型
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+	<!--如果文章摘要存在且是首页展示-->
+      
+	  <!--直接显示文章内容-->
+        <p>本章重点展示盒模型，同时围绕盒模型进行拓展</p>
+<h2 id="html源文档"><a href="#html源文档" class="headerlink" title="html源文档"></a>html源文档</h2><p>效果预览地址:<a href="http://clovey.party/ebook/book/04.html" target="_blank" rel="noopener">在线预览</a><br><a id="more"></a><br>源代码：<a href="https://github.com/xiaer93/ebook/tree/master/book" target="_blank" rel="noopener">源码预览</a></p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><h3 id="盒模型基本介绍？"><a href="#盒模型基本介绍？" class="headerlink" title="盒模型基本介绍？"></a>盒模型基本介绍？</h3><ol>
+<li><p>盒模型介绍<br>答：在一个文档中，每个元素都被表示为一个矩形的盒子。在css中，使用盒模型描述这些盒子，这个模型由内至外分别为：content、padding、border、margin！</p>
+</li>
+<li><p>ie和标准模型区别？</p>
+<ul>
+<li>ie模型的width=content+padding+border！</li>
+<li>标准模型的width=content！</li>
+<li>可以通过box-sizing修改模型，content-box遵循标准模型，border-box遵循ie模型！</li>
+</ul>
+</li>
+<li><p>外边界叠加理论？<br>答：当两个垂直边界（margin）相遇时，它们将形成一个边界。这个边界的高度等于两个发生叠加的边界的高度中的较大者。</p>
+<blockquote>
+<p>通过借助bfc避免外边距叠加！<br>空元素自身外边距也会叠加！</p>
+</blockquote>
+</li>
+<li><p>如何获取元素的宽高？</p>
+<ul>
+<li>通过ele.style.width获取元素的宽度</li>
+<li>通过window.getComputedStyle(ele)获取元素的宽度</li>
+<li>通过ele.getBoundingClientRect()获取元素的宽度</li>
+<li>通过clientWidth、offsetWidth、scrollWidth等获取元素的宽度</li>
+</ul>
+</li>
+<li><p>如何获取元素的定位尺寸？</p>
+<ul>
+<li>ele.clientLeft，边框的宽度！</li>
+<li>ele.offsetLeft，相对于定位父元素的距离（包括父元素的padding，不包括border和margin）</li>
+<li>ele.scrollLeft，如果元素是可以滚动的,可以通过这俩个属性得到元素在水平和垂直方向上滚动了多远,单位是象素. 对于不可以滚动的元素,这些值总是0.</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+	
+    <footer class="article-footer clear-float">
+	  <!--分享文章-->
+	 
+		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
+			<a data-url="http://www.clovey.party/04/" data-excerpt="&lt;p&gt;本章重点展示盒模型，同时围绕盒模型进行拓展&lt;/p&gt;
+&lt;h2 id=&#34;html源文档&#34;&gt;&lt;a href=&#34;#html源文档&#34; class=&#34;headerlink&#34; title=&#34;html源文档&#34;&gt;&lt;/a&gt;html源文档&lt;/h2&gt;&lt;p&gt;效果预览地址:&lt;a href=&#34;http://clovey.party/ebook/book/04.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;在线预览&lt;/a&gt;&lt;br&gt;" class="bds_more" data-cmd="more">分享到</a>
+		</div>
+	
+	  
+	  <!--显示tags-->
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
+
+    </footer>
   </div>
+  <!--显示文章导航-->
+  
+    <!--文章末尾处导航，上一篇、下一篇-->
+
+
+<nav id="article-nav">
+  
+    <a href="/05/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          HTML之ifc和bfc
+        
+      </div>
+    </a>
+  
+  
+    <a href="/03/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">HTML之常见范例</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+<!--如果不是首页，显示所有评论-->
+
+<section id="comments">
 
 
-<!--分页处理，即文章下的上一篇、下一篇-->
 
+	<!-- 来必力City版安装代码 -->
+	<div id="lv-container" data-id="city" data-uid="MTAyMC8zMjgxNi85Mzc3">
+		<script type="text/javascript">
+	   (function(d, s) {
+		   var j, e = d.getElementsByTagName(s)[0];
+
+		   if (typeof LivereTower === 'function') { return; }
+
+		   j = d.createElement(s);
+		   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		   j.async = true;
+
+		   e.parentNode.insertBefore(j, e);
+	   })(document, 'script');
+		</script>
+	<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+	</div>
+	<!-- City版安装代码已完成 -->
+
+
+</section>
 </section>
         <!--侧边栏，导入插件-->
 <aside id="sidebar" >

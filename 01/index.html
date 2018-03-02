@@ -113,8 +113,11 @@
       
 	  <!--直接显示文章内容-->
         <p>简单介绍html的历史、html文档的结构，同时也拓展了其他前端知识点，如样式脚本的异步加载、页面渲染原理及优化！</p>
-<h2 id="html源文档"><a href="#html源文档" class="headerlink" title="html源文档"></a>html源文档</h2><p>效果预览地址:<br><a id="more"></a><br>源代码：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;!--定义网页编码信息--&gt;</span><br><span class="line">        &lt;meta charset=<span class="string">"utf-8"</span>/&gt;</span><br><span class="line">        &lt;!--定义网页标题--&gt;</span><br><span class="line">        &lt;title&gt;html基本介绍&lt;/title&gt;</span><br><span class="line">        &lt;!--定义网页信息，方便搜索引擎自动收集网站信息--&gt;</span><br><span class="line">        &lt;!--定义网页关键词--&gt;</span><br><span class="line">        &lt;meta name=<span class="string">"keywords"</span> content=<span class="string">""</span>/&gt;</span><br><span class="line">        &lt;!--定义网页描述内容--&gt;</span><br><span class="line">        &lt;meta name=<span class="string">"description"</span> content=<span class="string">""</span>/&gt;</span><br><span class="line">        &lt;!--/定义网页信息，方便搜索引擎自动收集网站信息--&gt;</span><br><span class="line">        &lt;!--优化网页在移动设备上的显示效果--&gt;</span><br><span class="line">        &lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width"</span>/&gt;</span><br><span class="line">        &lt;!--定义页面2秒后跳转指定链接。http-equiv还可以对cache、cookie等进行控制！--&gt;</span><br><span class="line">        &lt;meta http-equiv=<span class="string">"refresh"</span> content=<span class="string">"2；URL=#"</span>&gt;</span><br><span class="line">        &lt;!--导入css样式表--&gt;</span><br><span class="line">        &lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"./css/01/style.css"</span>/&gt;</span><br><span class="line">        &lt;!--设置网页的小图标--&gt;</span><br><span class="line">        &lt;link rel=<span class="string">"shortcut icon"</span> href=<span class="string">"../source/img/favicon.ico"</span>/&gt;</span><br><span class="line">        &lt;link rel=<span class="string">"apple-touch-icon"</span> href=<span class="string">"../source/img/touchicon.png"</span>/&gt;</span><br><span class="line">        &lt;!--设置css样式--&gt;</span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            .g-doc&#123;</span><br><span class="line">                margin: 10px;</span><br><span class="line">                padding: 10px;</span><br><span class="line">                border: 1px solid <span class="comment">#ddd;</span></span><br><span class="line">                box-shadow: 1px 1px 5px <span class="comment">#aaa;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line"></span><br><span class="line">        &lt;!--设置或者导入js脚本--&gt;</span><br><span class="line">        &lt;script&gt;</span><br><span class="line">            window.onload=<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">                alert(<span class="string">'我是js脚本！'</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/script&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">    &lt;!--主要编辑区域--&gt;</span><br><span class="line">    &lt;div class=<span class="string">"g-doc"</span>&gt;</span><br><span class="line">        &lt;p&gt;hello world！&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;!--/主要编辑区域--&gt;</span><br><span class="line">    &lt;!--导入外部js脚本--&gt;</span><br><span class="line">    &lt;script src=<span class="string">"./js/01/index.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
-<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><h3 id="html的历史"><a href="#html的历史" class="headerlink" title="html的历史"></a>html的历史</h3><p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言，页面内可以包含图片、链接，甚至音乐、程序等非文字元素。html诞生于1993年，应用最广泛的为html4和xhtml，现如今更新至html5！浏览器对html4和xhtml支持良好，而对html5适配不完全。为此提几条具体建议：</p>
+<h2 id="html源文档"><a href="#html源文档" class="headerlink" title="html源文档"></a>html源文档</h2><p>效果预览地址:<a href="http://clovey.party/ebook/book/01.html" target="_blank" rel="noopener">在线预览</a><br><a id="more"></a><br>源代码：<a href="https://github.com/xiaer93/ebook/tree/master/book" target="_blank" rel="noopener">源码预览</a></p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><h3 id="html的历史"><a href="#html的历史" class="headerlink" title="html的历史"></a>html的历史</h3><blockquote>
+<p>超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言，页面内可以包含图片、链接，甚至音乐、程序等非文字元素。html诞生于1993年，应用最广泛的为html4和xhtml，现如今更新至html5！浏览器对html4和xhtml支持良好，而对html5适配不完全。</p>
+</blockquote>
+<p>为此提几条具体建议：</p>
 <ul>
 <li>编写格式严格的html语法，了解html5的最新特性！</li>
 <li>所有标签属性加引号 ：\<p id="pp"></p></li>
@@ -124,7 +127,8 @@
 </ul>
 <h3 id="浏览器渲染原理及流程"><a href="#浏览器渲染原理及流程" class="headerlink" title="浏览器渲染原理及流程"></a>浏览器渲染原理及流程</h3><ol>
 <li><p>原理和流程</p>
-<p> <img src="http://taligarsiel.com/Projects/webkitflow.png" alt="浏览器渲染原理及流程"><br> 渲染引擎首先通过网络获得所请求文档的内容，接着对html文档进行渲染，渲染流程为：解析html以构建dom树和css树 -&gt; 构建render树（dom和css整合生成） -&gt; 布局render树（根据信息计算元素的位置） -&gt; 绘制render树（在屏幕绘制）<br> 了解渲染流程，首先理解几个基本概念：</p>
+<p> <img src="http://taligarsiel.com/Projects/webkitflow.png" alt="浏览器渲染原理及流程"><br> 渲染引擎首先通过网络获得所请求文档的内容，接着对html文档进行渲染，渲染流程为：解析html以构建dom树和css树 -&gt; 构建render树（dom和css整合生成） -&gt; 布局render树（根据信息计算元素的位置） -&gt; 绘制render树（在屏幕绘制）</p>
+<p> 了解渲染流程，首先理解几个基本概念：</p>
 <ul>
 <li>DOM Tree：浏览器将HTML解析成树形的数据结构。</li>
 <li>CSS Rule Tree：浏览器将CSS解析成树形的数据结构。</li>
@@ -183,7 +187,7 @@
 	 
 		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
 			<a data-url="http://www.clovey.party/01/" data-excerpt="&lt;p&gt;简单介绍html的历史、html文档的结构，同时也拓展了其他前端知识点，如样式脚本的异步加载、页面渲染原理及优化！&lt;/p&gt;
-&lt;h2 id=&#34;html源文档&#34;&gt;&lt;a href=&#34;#html源文档&#34; class=&#34;headerlink&#34; title=&#34;html源文档&#34;&gt;&lt;/a&gt;html源文档&lt;/h2&gt;&lt;p&gt;效果预览地址:&lt;br&gt;" class="bds_more" data-cmd="more">分享到</a>
+&lt;h2 id=&#34;html源文档&#34;&gt;&lt;a href=&#34;#html源文档&#34; class=&#34;headerlink&#34; title=&#34;html源文档&#34;&gt;&lt;/a&gt;html源文档&lt;/h2&gt;&lt;p&gt;效果预览地址:&lt;a href=&#34;http://clovey.party/ebook/book/01.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;在线预览&lt;/a&gt;&lt;br&gt;" class="bds_more" data-cmd="more">分享到</a>
 		</div>
 	
 	  
@@ -287,23 +291,23 @@
       <ul>
         
           <li>
+            <a href="/07/">HTML之文档流</a>
+          </li>
+        
+          <li>
+            <a href="/06/">HTML之文档流</a>
+          </li>
+        
+          <li>
+            <a href="/05/">HTML之ifc和bfc</a>
+          </li>
+        
+          <li>
+            <a href="/04/">HTML之盒模型</a>
+          </li>
+        
+          <li>
             <a href="/03/">HTML之常见范例</a>
-          </li>
-        
-          <li>
-            <a href="/02/">HTML之常用标签</a>
-          </li>
-        
-          <li>
-            <a href="/01/">HTML之基础介绍</a>
-          </li>
-        
-          <li>
-            <a href="/landscape主题修改/">landscape主题修改</a>
-          </li>
-        
-          <li>
-            <a href="/保险知识md/">保险常识</a>
           </li>
         
       </ul>

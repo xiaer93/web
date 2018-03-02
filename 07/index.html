@@ -6,7 +6,7 @@
   <meta name="baidu-site-verification" content="jk1EoBpT2c" />
   <!--根据当前显示页面，修改网页title-->
   
-  <title>Tag: shadowsocks | xiaer</title>
+  <title>HTML之文档流 | xiaer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!--订阅feed，定义路径等等-->
  
@@ -73,56 +73,127 @@
 
       <div class="outer clear-float">
 		<!--body被响应模版替换，如首页时调用index.ejs模版！-->
-        <section id="main"><!--标签-->
-<!--归档-->
+        <section id="main"><!--文章，调用article模版-->
+<!--文章-->
+<article id="post-07" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <!--文章发布日期-->
 
-<!--根据是否为首页显示不同内容-->
-
-
-	<!--不是首页时候显示如下：-->
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <!--文档文章，难道是文档分类时候显示标题和时间？-->
-<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <!--文章发布日期-->
-
-<a href="/科学上网神器shadowsocks/" class="archive-article-date">
-  <time datetime="2016-07-29T13:17:43.000Z" itemprop="datePublished">7月 29</time>
+<a href="/07/" class="article-date">
+  <time datetime="2018-03-02T06:01:13.103Z" itemprop="datePublished">2018-03-02</time>
 </a>
-      <!--标题-->
+    <!--文章分类-->
+
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端总结/">前端总结</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    <!--文章图片-->
+
+
+	<!--post.link链接、或标题-->
+    
+      <header class="article-header">
+        <!--标题-->
 
 
 	<!--非引用文章-->
   
-	<!--如果在首页，则标题可以链接到正文！-->
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/科学上网神器shadowsocks/">科学上网神器shadowsocks</a>
+    <h1 class="article-title" itemprop="name">
+      HTML之文档流
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+	<!--如果文章摘要存在且是首页展示-->
+      
+	  <!--直接显示文章内容-->
+        <p>本章重点展示常用的布局方式，同时探讨他们之间的优缺点。</p>
+<h2 id="html源文档"><a href="#html源文档" class="headerlink" title="html源文档"></a>html源文档</h2><p>效果预览地址:<a href="http://clovey.party/ebook/book/07.html" target="_blank" rel="noopener">在线预览</a><br><a id="more"></a><br>源代码：<a href="https://github.com/xiaer93/ebook/tree/master/book" target="_blank" rel="noopener">源码预览</a></p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h3><ol>
+<li><p>参与布局的常用属性？<br>答：float、position、margin、flex、grid、table、inline-block、calc（计算属性）</p>
+</li>
+<li><p>以三栏布局为例，说明个种方式的优缺点？</p>
+<ul>
+<li>float布局，在文字环绕图片等情况具有不可替代作用！但是缺点：1、脱离文档流，并且容易造成父元素坍塌，需要及时清除浮动；2.脱离文档流，在父元素中设置的定位属性（text-align、vertical-align）均不会对子浮动元素产生影响；3.周围文字会环绕这个元素！；4.有时候2排图片（部分图片高度不同）浮动排列时，可能会混乱；兼容性较好</li>
+<li>inline-block布局(需要使用calc特性)，1.需要处理空白问题；2.对早期ie支持不是很友好！应用：图片排列、横向导航条！</li>
+<li>position布局，绝对定位简单快捷，但是脱离文档流（兄弟元素都需要脱离文档流！），对于移动端适应不是很友好。</li>
+<li>grid布局，做二维平面的布局，通常用于整个页面的规划。最新版本的浏览器才支持！</li>
+<li>table布局，具有垂直居中，等高，水平级联，匿名创建等特性（IE8的兼容性非常好）。</li>
+<li>flex布局，做局部布局，如某些应用程序的组件和小规模的布局（移动端布局优选）。</li>
+</ul>
+</li>
+<li><p>有哪些布局属于等高布局？<br>答：table、flex、grid、position</p>
+</li>
+</ol>
+
+      
+    </div>
+	
+    <footer class="article-footer clear-float">
+	  <!--分享文章-->
+	 
+		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
+			<a data-url="http://www.clovey.party/07/" data-excerpt="&lt;p&gt;本章重点展示常用的布局方式，同时探讨他们之间的优缺点。&lt;/p&gt;
+&lt;h2 id=&#34;html源文档&#34;&gt;&lt;a href=&#34;#html源文档&#34; class=&#34;headerlink&#34; title=&#34;html源文档&#34;&gt;&lt;/a&gt;html源文档&lt;/h2&gt;&lt;p&gt;效果预览地址:&lt;a href=&#34;http://clovey.party/ebook/book/07.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;在线预览&lt;/a&gt;&lt;br&gt;" class="bds_more" data-cmd="more">分享到</a>
+		</div>
+	
+	  
+	  <!--显示tags-->
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
+
+    </footer>
   </div>
+  <!--显示文章导航-->
+  
+    <!--文章末尾处导航，上一篇、下一篇-->
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/06/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">HTML之文档流</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+<!--如果不是首页，显示所有评论-->
+
+<section id="comments">
 
 
-<!--分页处理，即文章下的上一篇、下一篇-->
 
+	<!-- 来必力City版安装代码 -->
+	<div id="lv-container" data-id="city" data-uid="MTAyMC8zMjgxNi85Mzc3">
+		<script type="text/javascript">
+	   (function(d, s) {
+		   var j, e = d.getElementsByTagName(s)[0];
+
+		   if (typeof LivereTower === 'function') { return; }
+
+		   j = d.createElement(s);
+		   j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		   j.async = true;
+
+		   e.parentNode.insertBefore(j, e);
+	   })(document, 'script');
+		</script>
+	<noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+	</div>
+	<!-- City版安装代码已完成 -->
+
+
+</section>
 </section>
         <!--侧边栏，导入插件-->
 <aside id="sidebar" >

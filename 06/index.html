@@ -6,7 +6,7 @@
   <meta name="baidu-site-verification" content="jk1EoBpT2c" />
   <!--根据当前显示页面，修改网页title-->
   
-  <title>科学上网神器shadowsocks | xiaer</title>
+  <title>HTML之文档流 | xiaer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!--订阅feed，定义路径等等-->
  
@@ -75,17 +75,17 @@
 		<!--body被响应模版替换，如首页时调用index.ejs模版！-->
         <section id="main"><!--文章，调用article模版-->
 <!--文章-->
-<article id="post-科学上网神器shadowsocks" class="article article-type-post" itemscope itemprop="blogPost">
+<article id="post-06" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <!--文章发布日期-->
 
-<a href="/科学上网神器shadowsocks/" class="article-date">
-  <time datetime="2016-07-29T13:17:43.000Z" itemprop="datePublished">2016-07-29</time>
+<a href="/06/" class="article-date">
+  <time datetime="2018-03-02T06:01:13.102Z" itemprop="datePublished">2018-03-02</time>
 </a>
     <!--文章分类-->
 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/网络技术/">网络技术</a>
+    <a class="article-category-link" href="/categories/前端总结/">前端总结</a>
   </div>
 
   </div>
@@ -102,7 +102,7 @@
 	<!--非引用文章-->
   
     <h1 class="article-title" itemprop="name">
-      科学上网神器shadowsocks
+      HTML之文档流
     </h1>
   
 
@@ -112,24 +112,99 @@
 	<!--如果文章摘要存在且是首页展示-->
       
 	  <!--直接显示文章内容-->
-        <blockquote>
-<p><em>我希望有一天我能够住在一个拥有随意编写任何我喜欢的代码的国家而无需为之恐惧。</em></p>
-<p><em>我希望你们将来能为互联网自由贡献出了不起的东西。</em></p>
-</blockquote>
-<p><img src="http://i1.piimg.com/4851/db0b0d073bc14977.png" alt="clowwindy"><br>一直听说我们有个墙，也有个饭墙的冲动，谁让<strong>哪里有压迫哪里就有反抗</strong>呢？之前一直用的“自由门”软件，但是感觉很不稳定，大多数时间用不。折腾了好久，找各种饭墙软件啦，还有VPN等等，但是都感觉有点不靠谱，网友评论也是各种各种。直到最近发现了Shadowsocks，瞬间感觉有希望了，查看维基百科，居然还能有这么心酸的故事。</p>
+        <p>本章重点讲述前端中重要的两个概念：ifc和bfc，同时补充一些相关应用案例！</p>
+<h2 id="html源文档"><a href="#html源文档" class="headerlink" title="html源文档"></a>html源文档</h2><p>效果预览地址:<a href="http://clovey.party/ebook/book/06.html" target="_blank" rel="noopener">在线预览</a><br><a id="more"></a><br>源代码：<a href="https://github.com/xiaer93/ebook/tree/master/book" target="_blank" rel="noopener">源码预览</a></p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><h3 id="文档流"><a href="#文档流" class="headerlink" title="文档流"></a>文档流</h3><ol>
+<li><p>正常文档流的概念？<br>答：正常文档流，将窗体自上而下分成一行一行，块元素独占一行，相邻行内元素在每行中按从左到右地依次排列元素。</p>
+</li>
+<li><p>脱离文档流的几种方式？</p>
+<ul>
+<li>float不为none</li>
+<li>position为absolute或fixed</li>
+</ul>
+</li>
+</ol>
+<h3 id="块元素和行内元素？"><a href="#块元素和行内元素？" class="headerlink" title="块元素和行内元素？"></a>块元素和行内元素？</h3><ol>
+<li><p>块元素和行内元素的区别？</p>
+<ul>
+<li>块元素独占一行，而行内元素水平方向依次排列（父容器宽度不够时自动换行！）</li>
+<li>块元素可以包含行内元素，而行内元素内部不可以包含块元素！</li>
+<li>行内元素上下margin、padding不会影响行高，无法设置width和height！</li>
+</ul>
+</li>
+<li><p>哪些元素是块元素？哪些元素是行内元素？</p>
+<ul>
+<li>块元素：h1 h2 h3 p div hr form table ul ol dl blockquote address</li>
+<li>行内元素：a br em i strong input q strong sub sup </li>
+</ul>
+</li>
+<li><p>如果修改元素默认性质（块元素、行内元素）<br> 答：通过display可以修改标签的默认性质！</p>
+</li>
+</ol>
+<h3 id="包含块的内容？"><a href="#包含块的内容？" class="headerlink" title="包含块的内容？"></a>包含块的内容？</h3><ol>
+<li><p>包含块的介绍？<br>答：很多元素盒子的定位和尺寸的计算，都取决于一个矩形的边界，这个矩形，被称作是包含块。</p>
+</li>
+<li><p>如何判定包含块？</p>
+<ul>
+<li>根元素的包含块，被叫做初始包含块！html、body均为包含块！</li>
+<li>position为relative或static，其包含块为最近的块元素、单元格（table cell）、行内块元素（inline-block）祖先元素！</li>
+<li>position为fixed，其包含块为可视窗口！</li>
+<li>position为absolute，其包含块为最近的定位元素（position为absolute、fixed、relative的元素）！如果包含块为行内元素，还涉及到direction特性！</li>
+<li>非以上条件的，则父元素为包含块！</li>
+</ul>
+</li>
+<li><p>css的单位为百分比时，参照的选取？</p>
+<ul>
+<li>参照父元素的宽度：padding、margin、width、text-align、left</li>
+<li>参照父元素的高度：height、top、bottom</li>
+<li>参照父元素字体：font-size、line-height（line-height不带单位时，参照当前字体尺寸！）</li>
+<li>参照于自身：border-radius、transform-translate（自身的border-box）</li>
+<li><em>position为relative时，其left、right等属性参照自身的宽度！（top同理！）</em></li>
+<li><em>子元素为absolute，则以父元素paddingbox为计算基准；子元素为relative，则以父元素contentbox为计算基准！</em></li>
+</ul>
+</li>
+</ol>
+<h3 id="定位的信息？"><a href="#定位的信息？" class="headerlink" title="定位的信息？"></a>定位的信息？</h3><ol>
+<li>定位的几种方式？<ul>
+<li>static（默认，正常文档流）</li>
+<li>relative</li>
+<li>absolute</li>
+<li>fixed</li>
+</ul>
+</li>
+</ol>
+<h3 id="层叠上下文"><a href="#层叠上下文" class="headerlink" title="层叠上下文"></a>层叠上下文</h3><ol>
+<li><p>层叠上下文的概念？<br>答：层叠是HTML元素的一个三维概念，表示元素在Z轴上有堆叠层次。</p>
+</li>
+<li><p>层叠水平的概念？<br>答：层叠上下文中的每个元素都有一个层叠水平，决定了同一个层叠上下文中元素在z轴上的显示顺序。遵循“后来居上”和“谁大谁上”的层叠准则！每个元素都有层叠水平，但z-index只有在定位元素中才起作用。<br><img src="http://image.zhangxinxu.com/image/blog/201601/2016-01-07_235108.png" alt="层叠水平"></p>
 <blockquote>
-<p>Shadowsocks（中文名称：影梭）是使用Python等语言开发的、基于Apache许可证开源的代理软件。Shadowsocks使用socks5代理，用于保护网络流量。在中国大陆被广泛用于突破防火长城（GFW），以浏览被封锁的内容。</p>
-<p>Shadowsocks分为服务器端和客户端。在使用之前，需要先将服务器端部署在支持Python的服务器上面，然后通过客户端连接并创建本地代理。</p>
-<p>2015年8月22日，Shadowsocks原作者Clowwindy因受到中国政府的压力，停止维护此项目。但开发已有人接管，仍有更新陆续推送。ShadowsocksR可作为Shadowsocks的替代软件。</p>
+<p>层叠水平遵守后来居上，那么7层层叠水平图中的块级盒子怎么生效啊？</p>
 </blockquote>
-<a id="more"></a> 
-<p>作为一般用户，当然不用购买VPS部署服务器啦，直接找相关网站购买账户，用shadowsockR客户端登录。另外，一直使用chrome浏览器，有各种神器插件，暖暖的很贴心。其中有个主页插件Infinity，它好像在给某个SS网站打广告，唉，谁让这个插件真心好用呢，爱屋及乌，我就选择ss-fast，<a href="https://www.ss-fast.com/" target="_blank" rel="noopener"><strong>官网直达</strong></a>，顺带给他们打波广告吧。</p>
-<blockquote>
-<p>使用 SS-Fast 提供的加速服务，让您畅游在互联网的怀抱里，引领未来新生活。玩游戏、查资料、看视频，一套全搞定。</p>
-</blockquote>
-<p>ss-fast可以体验体验，每次15分钟，如果不嫌弃麻烦也可以循环操作循环使用。当然，我觉得还是支持下别人生意吧，毕竟饭墙不易，且行且珍惜，选择了15元/月套餐，使用起来感觉不错喔，网速棒棒哒。附上<a href="https://www.ss-fast.com/resources/docs/windows/" target="_blank" rel="noopener"><strong>WINDOWS平台安装配置教程</strong></a>，照着教程做就可以fan。</p>
-<p>扯了这么多，说说目的吧。曾有人说，要想功夫深，就得多用<a href="www.google.com.hk">谷歌</a>，虽然年轻不懂，但是还是多听听话&gt;&gt;&gt;<strong>科学上网，为了科学</strong>。最近就好好花时间研究研究干式变压器、学学python、还有hack等等。好好玩，保持科学上网，做一名好学生,等到羽翼丰满~</p>
-<p><img src="http://vc2tea.com/public/upload/whats-shadowsocks-04.png" alt="shadowsocks原理图"></p>
+</li>
+<li><p>层叠上下文的特性？</p>
+<ul>
+<li>层叠上下文的层叠水平要比普通元素高。</li>
+<li>层叠水平的比较只有在当前层叠上下文元素中才有意义</li>
+<li>层叠上下文可以嵌套，内部层叠上下文及其所有子元素均受制于外部的层叠上下文。</li>
+<li>每个层叠上下文和兄弟元素独立，也就是当进行层叠变化或渲染的时候，只需要考虑后代元素。</li>
+<li>每个层叠上下文是自成体系的，当元素发生层叠的时候，整个元素被认为是在父层叠上下文的层叠顺序中。</li>
+</ul>
+</li>
+<li><p>如何创建层叠上下文？</p>
+<ul>
+<li>根页面天生具有层叠上下文</li>
+<li>z-index不为auto的定位元素</li>
+<li>z-index值不为auto的flex项(父元素display:flex|inline-flex).</li>
+<li>元素的opacity值不是1.</li>
+<li>元素的transform值不是none.</li>
+<li>元素mix-blend-mode值不是normal.</li>
+<li>元素的filter值不是none.</li>
+<li>元素的isolation值是isolate.</li>
+<li>will-change指定的属性值为上面任意一个。</li>
+<li>元素的-webkit-overflow-scrolling设为touch.</li>
+</ul>
+</li>
+</ol>
 
       
     </div>
@@ -138,22 +213,14 @@
 	  <!--分享文章-->
 	 
 		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
-			<a data-url="http://www.clovey.party/科学上网神器shadowsocks/" data-excerpt="&lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;我希望有一天我能够住在一个拥有随意编写任何我喜欢的代码的国家而无需为之恐惧。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;我希望你们将来能为互联网自由贡献出了不起的东西。&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;http://i1.piimg.com/4851/db0b0d073bc14977.png&#34; alt=&#34;clowwindy&#34;&gt;&lt;br&gt;一直听说我们有个墙，也有个饭墙的冲动，谁让&lt;strong&gt;哪里有压迫哪里就有反抗&lt;/strong&gt;呢？之前一直用的“自由门”软件，但是感觉很不稳定，大多数时间用不。折腾了好久，找各种饭墙软件啦，还有VPN等等，但是都感觉有点不靠谱，网友评论也是各种各种。直到最近发现了Shadowsocks，瞬间感觉有希望了，查看维基百科，居然还能有这么心酸的故事。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Shadowsocks（中文名称：影梭）是使用Python等语言开发的、基于Apache许可证开源的代理软件。Shadowsocks使用socks5代理，用于保护网络流量。在中国大陆被广泛用于突破防火长城（GFW），以浏览被封锁的内容。&lt;/p&gt;
-&lt;p&gt;Shadowsocks分为服务器端和客户端。在使用之前，需要先将服务器端部署在支持Python的服务器上面，然后通过客户端连接并创建本地代理。&lt;/p&gt;
-&lt;p&gt;2015年8月22日，Shadowsocks原作者Clowwindy因受到中国政府的压力，停止维护此项目。但开发已有人接管，仍有更新陆续推送。ShadowsocksR可作为Shadowsocks的替代软件。&lt;/p&gt;
-&lt;/blockquote&gt;" class="bds_more" data-cmd="more">分享到</a>
+			<a data-url="http://www.clovey.party/06/" data-excerpt="&lt;p&gt;本章重点讲述前端中重要的两个概念：ifc和bfc，同时补充一些相关应用案例！&lt;/p&gt;
+&lt;h2 id=&#34;html源文档&#34;&gt;&lt;a href=&#34;#html源文档&#34; class=&#34;headerlink&#34; title=&#34;html源文档&#34;&gt;&lt;/a&gt;html源文档&lt;/h2&gt;&lt;p&gt;效果预览地址:&lt;a href=&#34;http://clovey.party/ebook/book/06.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;在线预览&lt;/a&gt;&lt;br&gt;" class="bds_more" data-cmd="more">分享到</a>
 		</div>
 	
 	  
 	  <!--显示tags-->
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shadowsocks/">shadowsocks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络技术/">网络技术</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
 
     </footer>
   </div>
@@ -164,19 +231,19 @@
 
 <nav id="article-nav">
   
-    <a href="/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/07/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
       <div class="article-nav-title">
         
-          Hello World
+          HTML之文档流
         
       </div>
     </a>
   
   
-    <a href="/基于hexo搭建github博客/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/05/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">基于hexo搭建github博客</div>
+      <div class="article-nav-title">HTML之ifc和bfc</div>
     </a>
   
 </nav>

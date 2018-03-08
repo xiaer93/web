@@ -6,7 +6,7 @@
   <meta name="baidu-site-verification" content="jk1EoBpT2c" />
   <!--根据当前显示页面，修改网页title-->
   
-  <title>HTML之常见范例 | xiaer</title>
+  <title>CSS之总结 | xiaer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!--订阅feed，定义路径等等-->
  
@@ -75,12 +75,12 @@
 		<!--body被响应模版替换，如首页时调用index.ejs模版！-->
         <section id="main"><!--文章，调用article模版-->
 <!--文章-->
-<article id="post-03" class="article article-type-post" itemscope itemprop="blogPost">
+<article id="post-12" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <!--文章发布日期-->
 
-<a href="/03/" class="article-date">
-  <time datetime="2018-02-28T02:01:19.601Z" itemprop="datePublished">2018-02-28</time>
+<a href="/12/" class="article-date">
+  <time datetime="2018-03-08T04:46:23.675Z" itemprop="datePublished">2018-03-08</time>
 </a>
     <!--文章分类-->
 
@@ -102,7 +102,7 @@
 	<!--非引用文章-->
   
     <h1 class="article-title" itemprop="name">
-      HTML之常见范例
+      CSS之总结
     </h1>
   
 
@@ -112,31 +112,97 @@
 	<!--如果文章摘要存在且是首页展示-->
       
 	  <!--直接显示文章内容-->
-        <p>针对于前端中常见的模块，如登录框、导航条、轮播图、表格等等，从各大热门网站高仿模拟实现，加强对html知识的理解！</p>
-<h2 id="html源文档"><a href="#html源文档" class="headerlink" title="html源文档"></a>html源文档</h2><p>效果预览地址:<a href="http://clovey.party/ebook/book/03.html" target="_blank" rel="noopener">在线预览</a><br><a id="more"></a><br>源代码：<a href="https://github.com/xiaer93/ebook/tree/master/book" target="_blank" rel="noopener">源码预览</a></p>
-<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><h3 id="浏览器兼容性问题？"><a href="#浏览器兼容性问题？" class="headerlink" title="浏览器兼容性问题？"></a>浏览器兼容性问题？</h3><ol>
-<li><p>css兼容性问题？</p>
-<ul>
-<li>标签不支持，如不支持html5新增标签（canvas等）</li>
-<li>属性不支持，如ie浏览器</li>
-<li><p>独有的私有属性</p>
-<p>解决方案：</p>
+        <p>本章重点展示css实现动画的集中方案，同时拓展js实现动画的几种方案！</p>
+<h2 id="html源文档"><a href="#html源文档" class="headerlink" title="html源文档"></a>html源文档</h2><p>效果预览地址:<a href="http://clovey.party/ebook/book/11.html" target="_blank" rel="noopener">在线预览</a><br><a id="more"></a><br>源代码：<a href="https://github.com/xiaer93/ebook/tree/master/book" target="_blank" rel="noopener">源码预览</a></p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><h3 id="css原则"><a href="#css原则" class="headerlink" title="css原则"></a>css原则</h3><h3 id="css方法论"><a href="#css方法论" class="headerlink" title="css方法论"></a>css方法论</h3><blockquote>
+<p> 对于css而言，会因代码量增大导致的核心问题是命名冲突。解决命名冲突的方法论是模块化，围绕此方法论，演化出种种模块化方案。</p>
+</blockquote>
+<ol>
+<li><p>命名模块化</p>
+<p> 基本思路是确保全局空间下一级域名不冲突，那么子域名就被限定在了独立的局部作用域中，从而保证命名的唯一性。</p>
 </li>
-<li>不实现进行友好提示，\<canvas\>您的浏览器不支持canvas哦！\</canvas\></li>
-<li>优雅降级，私有属性降级至公有属性！</li>
-<li>hack技术</li>
+</ol>
+<ul>
+<li>BEM命名方案</li>
+<li>SUIT CSS命名方案<ul>
+<li>将命名对象划分为组件和功能，添加额外的前缀。如：js-btn（<strong>对应于nec的模块命名</strong>）</li>
+<li>普通隔断用单个字符，描述性词汇用两个字符。如： .nav-button { }   .nav-button–primary { }</li>
+<li>状态切换使用is-前缀，如： .button.is-clicked { }</li>
 </ul>
 </li>
-<li><p>js兼容性问题？</p>
+<li>OOCSS命名方案<ul>
+<li>抽象公共类，把复用度高的样式抽取出来。如：.abs { position: absolute }（<strong>对应于nec的函数功能</strong>）</li>
+<li>优点是提高复用性，缺点是若更换类名、则需要修改多处名称！</li>
+</ul>
+</li>
+<li>SMACSS命名方案（同nec规范？？？）<ul>
+<li>Base：基础的样式规则</li>
+<li>Layout：用于布局的样式规则</li>
+<li>Module：可复用的模块样式规则</li>
+<li>State：状态样式</li>
+<li>Theme：UI样式</li>
+</ul>
+</li>
+<li>ITCSS命名方案</li>
+</ul>
+<ol>
+<li>css in js<br>减少使用css选择器，直接将css写在js中！例如React框架！<ul>
+<li>大型css存在的问题<ul>
+<li>全局的命名空间容易污染、冲突</li>
+<li>依赖管理复杂</li>
+<li>无用代码难以清除</li>
+<li>长命名导致代码体积无法进一步压缩</li>
+<li>不利于和 JS 共享常量</li>
+<li>不确定的解析结果（CSS 中存在层叠，如果层叠系数高的代码加载更慢，会导致最终解析的样式发生突变）</li>
+<li>不能解耦（改一处 CSS，所有使用该 CSS 的 UI 样式都会受影响）</li>
+</ul>
+</li>
+<li>react虽然解决了上述问题，但是存在缺点：<ul>
+<li>难以调试</li>
+<li>不能使用css预处理器</li>
+<li>不能使用media query</li>
+<li>不能使用伪元素</li>
+<li>仅限于React</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>css module<br> css in js另一种形式，通过js编译原生css文件，使其具备模块化的功能！</p>
 <ul>
-<li>不支持最新的javascript语法，如不支持dom2级</li>
-<li>事件添加方式不一致</li>
-<li></li>
+<li>webpack通过style-loader!css-loader?modules就可以打开css module功能！</li>
+<li>文章参考：<a href="http://www.ruanyifeng.com/blog/2016/06/css_modules.html" target="_blank" rel="noopener">链接</a></li>
+</ul>
+</li>
+<li><p>PostCSS</p>
+</li>
+<li><p>Atomic CSS</p>
+</li>
+</ol>
+<h3 id="css预处理和css后处理"><a href="#css预处理和css后处理" class="headerlink" title="css预处理和css后处理"></a>css预处理和css后处理</h3><ol>
+<li><p>css预处理有哪些？<br>Sass、LESS、Stylus 是目前最主流的 CSS 预处理器。</p>
+<ul>
+<li>优点：语言级逻辑处理，动态特性，改善项目结构</li>
+<li>缺点：采用特殊语法，框架耦合度高，复杂度高</li>
+</ul>
+</li>
+<li><p>css后处理有哪些？<br>PostCss、ReWork</p>
+<ul>
+<li>优点：使用 CSS 语法，容易进行模块化，贴近 CSS 的未来标准</li>
+<li>缺点：逻辑处理能力有限</li>
 </ul>
 </li>
 </ol>
-<h3 id="html规范"><a href="#html规范" class="headerlink" title="html规范"></a>html规范</h3><p>规范的html文档有利于理解和维护，因此在学习html过程中，应该有意识的使代码更加规范！</p>
-<p><a href="http://nec.netease.com/" target="_blank" rel="noopener">在线查看nec规范</a></p>
+<h3 id="css原则-1"><a href="#css原则-1" class="headerlink" title="css原则"></a>css原则</h3><ol>
+<li><p>css有哪些原则？</p>
+</li>
+<li><p>为什么要讲究css原则？</p>
+</li>
+</ol>
+<p>参考文章：</p>
+<ol>
+<li><a href="http://www.cnblogs.com/kidney/p/6197037.html" target="_blank" rel="noopener">CSS方法论完全总结</a></li>
+<li></li>
+</ol>
 
       
     </div>
@@ -145,8 +211,8 @@
 	  <!--分享文章-->
 	 
 		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
-			<a data-url="http://www.clovey.party/03/" data-excerpt="&lt;p&gt;针对于前端中常见的模块，如登录框、导航条、轮播图、表格等等，从各大热门网站高仿模拟实现，加强对html知识的理解！&lt;/p&gt;
-&lt;h2 id=&#34;html源文档&#34;&gt;&lt;a href=&#34;#html源文档&#34; class=&#34;headerlink&#34; title=&#34;html源文档&#34;&gt;&lt;/a&gt;html源文档&lt;/h2&gt;&lt;p&gt;效果预览地址:&lt;a href=&#34;http://clovey.party/ebook/book/03.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;在线预览&lt;/a&gt;&lt;br&gt;" class="bds_more" data-cmd="more">分享到</a>
+			<a data-url="http://www.clovey.party/12/" data-excerpt="&lt;p&gt;本章重点展示css实现动画的集中方案，同时拓展js实现动画的几种方案！&lt;/p&gt;
+&lt;h2 id=&#34;html源文档&#34;&gt;&lt;a href=&#34;#html源文档&#34; class=&#34;headerlink&#34; title=&#34;html源文档&#34;&gt;&lt;/a&gt;html源文档&lt;/h2&gt;&lt;p&gt;效果预览地址:&lt;a href=&#34;http://clovey.party/ebook/book/11.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;在线预览&lt;/a&gt;&lt;br&gt;" class="bds_more" data-cmd="more">分享到</a>
 		</div>
 	
 	  
@@ -163,19 +229,10 @@
 
 <nav id="article-nav">
   
-    <a href="/04/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          HTML之盒模型
-        
-      </div>
-    </a>
   
-  
-    <a href="/02/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/11/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">HTML之常用标签</div>
+      <div class="article-nav-title">CSS之动画</div>
     </a>
   
 </nav>

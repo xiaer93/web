@@ -6,7 +6,7 @@
   <meta name="baidu-site-verification" content="jk1EoBpT2c" />
   <!--根据当前显示页面，修改网页title-->
   
-  <title>HTML之常见范例 | xiaer</title>
+  <title>CSS之选择器 | xiaer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <!--订阅feed，定义路径等等-->
  
@@ -75,12 +75,12 @@
 		<!--body被响应模版替换，如首页时调用index.ejs模版！-->
         <section id="main"><!--文章，调用article模版-->
 <!--文章-->
-<article id="post-03" class="article article-type-post" itemscope itemprop="blogPost">
+<article id="post-10" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <!--文章发布日期-->
 
-<a href="/03/" class="article-date">
-  <time datetime="2018-02-28T02:01:19.601Z" itemprop="datePublished">2018-02-28</time>
+<a href="/10/" class="article-date">
+  <time datetime="2018-03-08T04:46:23.635Z" itemprop="datePublished">2018-03-08</time>
 </a>
     <!--文章分类-->
 
@@ -102,7 +102,7 @@
 	<!--非引用文章-->
   
     <h1 class="article-title" itemprop="name">
-      HTML之常见范例
+      CSS之选择器
     </h1>
   
 
@@ -112,31 +112,116 @@
 	<!--如果文章摘要存在且是首页展示-->
       
 	  <!--直接显示文章内容-->
-        <p>针对于前端中常见的模块，如登录框、导航条、轮播图、表格等等，从各大热门网站高仿模拟实现，加强对html知识的理解！</p>
-<h2 id="html源文档"><a href="#html源文档" class="headerlink" title="html源文档"></a>html源文档</h2><p>效果预览地址:<a href="http://clovey.party/ebook/book/03.html" target="_blank" rel="noopener">在线预览</a><br><a id="more"></a><br>源代码：<a href="https://github.com/xiaer93/ebook/tree/master/book" target="_blank" rel="noopener">源码预览</a></p>
-<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><h3 id="浏览器兼容性问题？"><a href="#浏览器兼容性问题？" class="headerlink" title="浏览器兼容性问题？"></a>浏览器兼容性问题？</h3><ol>
-<li><p>css兼容性问题？</p>
+        <p>本章重点展示css选择器的使用，同时探讨css样式层叠冲突！</p>
+<h2 id="html源文档"><a href="#html源文档" class="headerlink" title="html源文档"></a>html源文档</h2><p>效果预览地址:<a href="http://clovey.party/ebook/book/10.html" target="_blank" rel="noopener">在线预览</a><br><a id="more"></a><br>源代码：<a href="https://github.com/xiaer93/ebook/tree/master/book" target="_blank" rel="noopener">源码预览</a></p>
+<h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><h3 id="css选择器"><a href="#css选择器" class="headerlink" title="css选择器"></a>css选择器</h3><ol>
+<li><p>css选择器有哪些？</p>
 <ul>
-<li>标签不支持，如不支持html5新增标签（canvas等）</li>
-<li>属性不支持，如ie浏览器</li>
-<li><p>独有的私有属性</p>
-<p>解决方案：</p>
-</li>
-<li>不实现进行友好提示，\<canvas\>您的浏览器不支持canvas哦！\</canvas\></li>
-<li>优雅降级，私有属性降级至公有属性！</li>
-<li>hack技术</li>
+<li>id选择器</li>
+<li>class选择器</li>
+<li>元素选择器</li>
+<li>通配选择器*</li>
+<li>分组选择器</li>
+<li>伪元素选择器：<ul>
+<li>a:link/visited/hover/active</li>
+<li>:focus在onfocus发生时的样式</li>
+<li>:not(s)不含有s选择符的元素</li>
+<li>:first-child第一个子元素/last-child最后一个子元素</li>
+<li>:nth-child()，选择某个元素的一个或多个特定的子元素！/nth-last-child从最后面开始！</li>
+<li>:nth-of-type选择指定的元素</li>
+<li>first-of-type与父元素同类的第一个子元素</li>
+<li>:empty元素内没有任何内容</li>
 </ul>
 </li>
-<li><p>js兼容性问题？</p>
+<li>伪类选择器：<ul>
+<li>::first-letter对象内第一个字符样式（可应用于设计首字下沉效果！）</li>
+<li>::first-line对象第一行样式</li>
+<li>::placeholder</li>
+<li>::selection被选中时的颜色</li>
+</ul>
+</li>
+<li>状态选择器：<ul>
+<li>:check，用于radio和checkbox被选中时</li>
+<li>:enable/:disable</li>
+</ul>
+</li>
+<li>层次选择器：<ul>
+<li>后代选择器M N，选择M元素内部所有后代N元素（所有N元素）</li>
+<li>子代选择器M&gt;N，选择M元素内部子代N元素（所有第1级N元素）</li>
+<li>兄弟选择器M~N，选择M元素后所有同级N元素</li>
+<li>相邻选择器M+N，选择M元素相邻的下一个同级元素N</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>有哪些css属性可以被继承？</p>
 <ul>
-<li>不支持最新的javascript语法，如不支持dom2级</li>
-<li>事件添加方式不一致</li>
-<li></li>
+<li>1、文本相关：font-family、font-size、font-style、font-weight、font、line-height、text-align、text-indent、word-spacing</li>
+<li>2、列表相关：list-style-image、list-style-position、list-style-type、list-style</li>
+<li>3、颜色属性：color</li>
+<li>padding、margin、border等就不具备继承性！</li>
+</ul>
+</li>
+<li><p>当一个元素有多个样式时，如何抉择？</p>
+<ul>
+<li>引用方式冲突，行内样式&gt;（内部样式=外部样式）</li>
+<li>继承方式冲突，以最近的父元素为准</li>
+<li>指定样式冲突，行内样式&gt;id选择器&gt;class选择器&gt;元素选择器</li>
+<li>继承样式和指定样式冲突，以指定样式为准！（继承样式不用计算权重！以指定样式为准！）</li>
+<li>!important，改变优先级，使其权重最高。如果想要覆盖!important，则只需使用更高优先级或则后来者居上！</li>
 </ul>
 </li>
 </ol>
-<h3 id="html规范"><a href="#html规范" class="headerlink" title="html规范"></a>html规范</h3><p>规范的html文档有利于理解和维护，因此在学习html过程中，应该有意识的使代码更加规范！</p>
-<p><a href="http://nec.netease.com/" target="_blank" rel="noopener">在线查看nec规范</a></p>
+<h3 id="css单位"><a href="#css单位" class="headerlink" title="css单位"></a>css单位</h3><ol>
+<li><p>单位基本介绍<br>答：单位大体分2类，绝对单位和相对单位！</p>
+</li>
+<li><p>相对单位介绍？</p>
+<ul>
+<li>百分比，相对于包容块的相同属性计算大小！<ul>
+<li>width、height、font-size的百分比是相对于父元素的相同属性值来计算的！</li>
+<li>line-height的百分比是相对于父元素的font-size的值计算的。</li>
+<li>vertical-align的百分比是相对当前元素的line-height值来计算的。</li>
+<li>margin和padding的百分比是相对于父元素的宽度！</li>
+</ul>
+</li>
+<li>em/rem，基于字体尺寸计算大小！<ul>
+<li>em相对于父元素的字体大小</li>
+<li>rem相对于html元素的字体大小</li>
+</ul>
+</li>
+<li>ex/ch、，相对于当前字体font-family/font-size。<ul>
+<li>ex指字母x的高度</li>
+<li>ch指字母o的宽度</li>
+</ul>
+</li>
+<li>vw/vh，依据窗口而定尺寸！（响应式网页设计）<ul>
+<li>vh等于视窗高度的1/100</li>
+<li>vw等于视窗宽度的1/100</li>
+</ul>
+</li>
+<li>vmin、vmax是针对于vw/vh<ul>
+<li>vmin 是vw和vh中比较 小 的值</li>
+<li>vmax 是vw和vh中比较 大 的值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>绝对单位介绍？</p>
+<ul>
+<li>px计算机屏幕的一个点！</li>
+<li>pt</li>
+<li>cm，1厘米</li>
+</ul>
+</li>
+<li><p>使用rem移动端布局</p>
+<ul>
+<li>通过设置html中字体大小，实现响应式布局（布局使用rem，字体使用px？）参照<a href="https://github.com/amfe/lib-flexible" target="_blank" rel="noopener">淘宝m站首页</a></li>
+<li>除了js修改字体大小，还可以通过媒体查询修改字体大小！</li>
+</ul>
+</li>
+<li><p>书籍阅读，响应式Web设计：HTML5和CSS3实战。（待完成）</p>
+</li>
+</ol>
 
       
     </div>
@@ -145,8 +230,8 @@
 	  <!--分享文章-->
 	 
 		<div  class="bdsharebuttonbox article-share-link" data-tag="share_1">
-			<a data-url="http://www.clovey.party/03/" data-excerpt="&lt;p&gt;针对于前端中常见的模块，如登录框、导航条、轮播图、表格等等，从各大热门网站高仿模拟实现，加强对html知识的理解！&lt;/p&gt;
-&lt;h2 id=&#34;html源文档&#34;&gt;&lt;a href=&#34;#html源文档&#34; class=&#34;headerlink&#34; title=&#34;html源文档&#34;&gt;&lt;/a&gt;html源文档&lt;/h2&gt;&lt;p&gt;效果预览地址:&lt;a href=&#34;http://clovey.party/ebook/book/03.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;在线预览&lt;/a&gt;&lt;br&gt;" class="bds_more" data-cmd="more">分享到</a>
+			<a data-url="http://www.clovey.party/10/" data-excerpt="&lt;p&gt;本章重点展示css选择器的使用，同时探讨css样式层叠冲突！&lt;/p&gt;
+&lt;h2 id=&#34;html源文档&#34;&gt;&lt;a href=&#34;#html源文档&#34; class=&#34;headerlink&#34; title=&#34;html源文档&#34;&gt;&lt;/a&gt;html源文档&lt;/h2&gt;&lt;p&gt;效果预览地址:&lt;a href=&#34;http://clovey.party/ebook/book/10.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;在线预览&lt;/a&gt;&lt;br&gt;" class="bds_more" data-cmd="more">分享到</a>
 		</div>
 	
 	  
@@ -163,19 +248,19 @@
 
 <nav id="article-nav">
   
-    <a href="/04/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/11/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
       <div class="article-nav-title">
         
-          HTML之盒模型
+          CSS之动画
         
       </div>
     </a>
   
   
-    <a href="/02/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/07/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">HTML之常用标签</div>
+      <div class="article-nav-title">HTML之常见布局</div>
     </a>
   
 </nav>

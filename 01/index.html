@@ -125,6 +125,35 @@
 <li>属性值不进行省略：\<input type="checkbox" checked="checked"></li>
 <li>自闭合标签需要闭合：\<br></li>
 </ul>
+<h3 id="从输入网址到显示网页的过程中发生了什么？"><a href="#从输入网址到显示网页的过程中发生了什么？" class="headerlink" title="从输入网址到显示网页的过程中发生了什么？"></a>从输入网址到显示网页的过程中发生了什么？</h3><ol>
+<li>发生了什么过程？<ul>
+<li>用户输入url，客户端从服务器获取数据</li>
+<li>客户端获取数据后开始渲染页面</li>
+</ul>
+</li>
+<li>获取数据的过程？<ul>
+<li>查找浏览器缓存</li>
+<li>输入地址url，通过dns解析获取对应的ip</li>
+<li>浏览器通过tcp三次握手建立tcp/ip链接</li>
+<li>浏览器通过tcp/ip发送http请求！</li>
+<li>服务器永久重定向响应</li>
+<li>浏览器跟踪重定向地址</li>
+<li>服务器处理请求，服务器返回http响应！</li>
+<li>浏览器显示html内容<ul>
+<li>浏览器发送请求获取嵌入在 HTML 中的资源（如图片、音频、视频、CSS、JS等等）</li>
+<li>静态文件会允许浏览器对其进行缓存。有的文件可能会不需要与服务器通讯，而从缓存中直接读取</li>
+</ul>
+</li>
+<li>浏览器发出ajax请求！</li>
+</ul>
+</li>
+<li>浏览器渲染对应的事件<ul>
+<li>document.ready事件，表示dom已经加载完成（同步 JavaScript 会暂停 DOM 的解析。）（不包含图片等非文字媒体）【html5标准事件DOMContentLoaded】</li>
+<li>window.onload事件，表示包含图片等所有元素都加载完成</li>
+<li>document.onreadystatechange事件，当文档的readyState属性发生改变，readystatechange事件会被触发。</li>
+</ul>
+</li>
+</ol>
 <h3 id="浏览器渲染原理及流程"><a href="#浏览器渲染原理及流程" class="headerlink" title="浏览器渲染原理及流程"></a>浏览器渲染原理及流程</h3><ol>
 <li><p>原理和流程</p>
 <p> <img src="http://taligarsiel.com/Projects/webkitflow.png" alt="浏览器渲染原理及流程"><br> 渲染引擎首先通过网络获得所请求文档的内容，接着对html文档进行渲染，渲染流程为：解析html以构建dom树和css树 -&gt; 构建render树（dom和css整合生成） -&gt; 布局render树（根据信息计算元素的位置） -&gt; 绘制render树（在屏幕绘制）</p>
@@ -178,6 +207,59 @@
 </ul>
 </li>
 </ol>
+<h3 id="前端缓存的机理？"><a href="#前端缓存的机理？" class="headerlink" title="前端缓存的机理？"></a>前端缓存的机理？</h3><ol>
+<li>前端缓存的分类？<ul>
+<li>服务端缓存，如：CDN</li>
+<li>客户端缓存，浏览器对于静态资源（CSS,JS,图片）的缓存！</li>
+<li>通过js对ajax获取的数据进行缓存！</li>
+</ul>
+</li>
+<li>为什么要使用缓存？<ul>
+<li>请求更快，在不影响交互的前提下，大大加快网站访问的速度！</li>
+<li>节省带宽，对已缓存的文件，可以减少网络请求！</li>
+<li>降低服务器压力，将静态资源放在多个节点上降低服务器压力！</li>
+</ul>
+</li>
+<li>浏览器缓存的机理？<ul>
+<li>浏览器缓存的分类？<ul>
+<li>强缓存，浏览器在加载资源时，先根据这个资源的一些http header判断它是否命中强缓存，强缓存如果命中，浏览器直接从自己的缓存中读取资源，不会发请求到服务器。</li>
+<li>协商缓存，当强缓存没有命中的时候，浏览器一定会发送一个请求到服务器，通过服务器端依据资源的另外一些http header验证这个资源是否命中协商缓存，如果协商缓存命中，服务器会将这个请求返回（304），但是不会返回这个资源的数据，而是告诉客户端可以直接从缓存中加载这个资源，于是浏览器就又会从自己的缓存中去加载这个资源；若未命中请求，则将资源返回客户端，并更新本地缓存数据（200）。</li>
+</ul>
+</li>
+<li>如何设置缓存？<ul>
+<li>http meta标签，<meta http-equiv="Pragma" content="no-cache">，这段代码告诉浏览器当前页面不缓存！</li>
+<li>通过设置http头部信息，如：Expires（强缓存）、Cache-control（强缓存）、Last-Modified/If-Modified-Since（协商缓存）、Etag/If-None-Match（协商缓存）<ul>
+<li>Expires设置资源过期时间（绝对时间），Expires:Thu, 31 Dec 2016 23:55:55 GMT</li>
+<li>Cache-control设置资源过期事件（相对事件，借助max-age属性！）（cache-control还有其他属性值，如public、private、no-cache、no-store等）</li>
+<li>Expires和Cache-Control同时存在时，Cache-Control优先级高于Expires！</li>
+<li>last-Modified/If-Modified-Since协商缓存，需要配合cache-control使用！（当强缓存失效时，浏览器携带If-Modified-Since头部。服务端接受后，将Last-Modified与资源最后修改时间进行确认，若文件更新了则200，否则304！）（缺点：文件可能定期刷新，但是内容没更新，导致缓存无法使用！）</li>
+<li>Etag/If-None-Match协商缓存，需配合cache-control使用！（当资源过期时，浏览器携带If-None-Match头部。服务器接受后，将Etag与资源标识符进行对比，若相同则304，否则200！）（etag解决了上述问题，etag由服务器生成的资源标识符！）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>浏览器的处理流程！<br>  <img src="https://segmentfault.com/img/bVCrP5" alt=""><br>  <img src="https://segmentfault.com/img/bVCrP8" alt=""></li>
+<li>浏览器缓存行为还与用户行为有关?<ul>
+<li>地址栏回车</li>
+<li>页面链接跳转</li>
+<li>新窗口打开</li>
+<li>前进后退！</li>
+<li>f5刷新，对于强缓存无效（不适用强缓存），对于协商缓存有效！</li>
+<li>ctrl-f5刷新，对于强缓存和协商缓存都无效！</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>cdn缓存的机理？<br>  <img src="https://segmentfault.com/img/bVCrQC" alt=""></li>
+<li>js缓存的原理？<ul>
+<li>通过js的变量存储ajax获取的数据！</li>
+<li>或者通过localStroage存储数据，本地</li>
+<li>或者通过sessionStroage储存数据，会话数据！</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -213,11 +295,6 @@
       </div>
     </a>
   
-  
-    <a href="/landscape主题修改/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">landscape主题修改</div>
-    </a>
   
 </nav>
 
@@ -268,7 +345,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端总结/">前端总结</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/投资理财/">投资理财</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/网络技术/">网络技术</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端总结/">前端总结</a></li></ul>
     </div>
   </div>
 
@@ -279,7 +356,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/hexo主题/" style="font-size: 10px;">hexo主题</a> <a href="/tags/html/" style="font-size: 20px;">html</a> <a href="/tags/shadowsocks/" style="font-size: 10px;">shadowsocks</a> <a href="/tags/理财/" style="font-size: 10px;">理财</a> <a href="/tags/网络技术/" style="font-size: 15px;">网络技术</a>
+      <a href="/tags/html/" style="font-size: 10px;">html</a>
     </div>
   </div>
 
@@ -291,23 +368,23 @@
       <ul>
         
           <li>
-            <a href="/07/">HTML之文档流</a>
+            <a href="/12/">CSS之总结</a>
+          </li>
+        
+          <li>
+            <a href="/11/">CSS之动画</a>
+          </li>
+        
+          <li>
+            <a href="/10/">CSS之选择器</a>
+          </li>
+        
+          <li>
+            <a href="/07/">HTML之常见布局</a>
           </li>
         
           <li>
             <a href="/06/">HTML之文档流</a>
-          </li>
-        
-          <li>
-            <a href="/05/">HTML之ifc和bfc</a>
-          </li>
-        
-          <li>
-            <a href="/04/">HTML之盒模型</a>
-          </li>
-        
-          <li>
-            <a href="/03/">HTML之常见范例</a>
           </li>
         
       </ul>
